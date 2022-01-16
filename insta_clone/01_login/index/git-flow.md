@@ -13,6 +13,7 @@
 
 3. feature branches
 開発者が直接コードを修正してコミットするブランチ。 developから分岐し、**develop**にマージする。
+
 **開発の流れ**
 
 - developブランチからfeatureブランチを作成する
