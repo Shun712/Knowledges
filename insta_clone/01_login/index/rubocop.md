@@ -42,7 +42,7 @@ $ rubocop --auto-correct
 > ⓪ `$ rubocop --auto-correct`を実行して、自動で修正できるものはしてもらう。残りの警告がたくさんある場合は①へ。警告がそんなに多くない場合(10 ~ 20個とか)は③と④を繰り返す。
 > Railsのコード規則を学ぶのにとても良い教材だと思うので初めは⓪を飛ばすことをお勧めします。)
 
-> ① 警告がたくさんあると見ずらいので`$ rubocop --auto-gen-config`を実行し、`.rubocop_todo.yml`を作成し、そこに全ての警告をいったん移す。(こうすることで$ rubocopを実行しても今の段階では全ての警告は無視されます。)
+> ① 警告がたくさんあると見ずらいので`$ rubocop --auto-gen-config`を実行し、`.rubocop_todo.yml`を作成し、そこに全ての警告をいったん移す。(こうすることで`$ rubocop`を実行しても今の段階では全ての警告は無視されます。)
 
 > ② `.rubocop_todo.yml`内の警告の中から一番上の警告をコメントアウトする。(コメントアウトした警告だけが再びRuboCopに感知されるようになる)
 
@@ -60,7 +60,8 @@ $ rubocop --auto-correct
 
 # 忘れがちになるための対策
 開発を進めていくと、rubocop機能は忘れがちになるので注意が必要である
-[【Ruby on Rails】rubocop と pre-commit を利用して git commit 時にコーディングチェックを行う](https://techblog.kyamanak.com/entry/2018/06/19/221910)
+
+> [【Ruby on Rails】rubocop と pre-commit を利用して git commit 時にコーディングチェックを行う](https://techblog.kyamanak.com/entry/2018/06/19/221910)
 
 # 参考
 [RuboCop is 何？](https://qiita.com/tomohiii/items/1a17018b5a48b8284a8b)
