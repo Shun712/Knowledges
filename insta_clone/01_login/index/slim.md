@@ -66,3 +66,4 @@ div.sample
 
 # 参考
 [【Rails】 slimの書き方をマスターしよう！](https://pikawaka.com/rails/slim)
+[slimの導入](https://qiita.com/ngron/items/c03e68642c2ab77e7283#slim%E3%81%AE%E5%B0%8E%E5%85%A5)
