@@ -1,8 +1,10 @@
 - git-flowとは?
+
 プラグイン(ツール)のことである。
 [![Image from Gyazo](https://i.gyazo.com/6d6d7e51a54c23d65d7b921bccba5eaa.png)](https://gyazo.com/6d6d7e51a54c23d65d7b921bccba5eaa)
 
 - 各ブランチの役割
+
 1. master
 プロダクトとしてリリースするためのブランチ。開発者がmasterブランチのコードを直接修正してコミットすることはない。
 
@@ -12,10 +14,15 @@
 3. feature branches
 開発者が直接コードを修正してコミットするブランチ。 developから分岐し、**develop**にマージする。
 開発の流れ
+
   - developブランチからfeatureブランチを作成する
+
   - featureブランチで機能を実装する
+  
   - GitHubにプッシュし、developブランチに対してプルリクエストを送る
+
   - レビューを受けてdevelopブランチにプルリクエストをマージする
+
 developブランチにマージされたらfeatureブランチは不要になるので削除する。
 
 4. hotfix
@@ -26,6 +33,7 @@ developブランチにいくつかのfeatureブランチがマージされ、リ
 問題がなければreleaseブランチから**master**ブランチにマージして本番環境にもデプロイする。
 
 - 開発者の流れ
+
 1. featureブランチを切ってコツコツ開発する。
 2. プルリクを送り、レビューを受けてdevelopブランチへマージする。
 3. featureブランチを削除する

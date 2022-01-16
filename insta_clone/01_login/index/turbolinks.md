@@ -1,8 +1,10 @@
 - turbolinksとは？
+
 Rails4から正式導入された画面遷移を高速化させるライブラリである。
 Railsではデフォルトでgemとして組み込まれている。
 
 - 仕組み
+
 turbolinksにおいて、リンクからページ表示までの一連の流れを**Visit**と呼ぶ。
   - Application Visits = リンククリックによるページ遷移
   - Restoration Visits = ブラウザの戻る/進むボタンによるページ遷移
