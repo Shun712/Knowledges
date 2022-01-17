@@ -38,4 +38,5 @@ end
 
 # 参考
 [【Rails】sorceryについて](https://boku-boc.hatenablog.com/entry/2020/10/10/213625)
+
 [シンプル認証gem sorceryを完全入門するで！！](https://qiita.com/babashunsu/items/9937b0a2e08d318edece)
