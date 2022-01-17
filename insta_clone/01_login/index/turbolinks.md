@@ -31,5 +31,7 @@ turbolinksにおいて、リンクからページ表示までの一連の流れ�
 
 # 参考
 [6. Turbolinks](https://www.techscore.com/tech/Ruby/rails-4.0/turbolinks/)
+
 [turbolinksチートシート](https://qiita.com/morrr/items/54f4be21032a45fd4fe9)
+
 [【Rails】初心者向け！画面遷移の高速化を行うTurbolinksについて図を用いて詳しく解説](https://techtechmedia.com/turbolinks-rails/)
