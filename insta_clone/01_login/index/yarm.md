@@ -73,7 +73,7 @@ npmよりインストールが速い。
 
 `stylesheet_link_tag`を`stylesheet_pack_tag`に変更している。
 
-7. jQueryとPopper.jsの有効化
+**7. jQueryとPopper.jsの有効化**
 
 (app/config/webpack/environment.js)
 
