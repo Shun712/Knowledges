@@ -6,24 +6,24 @@ npmよりインストールが速い。
 
 # Yarnを使ってbootstrap material designを導入する
 
-1. yarnのインストール
+**1. yarnのインストール**
 
 `sudo npm install -g yarn`
 
-2. package.jsonの生成
+**2. package.jsonの生成**
 
 `package.json`でパッケージを一括管理できる。
 プロジェクトにまだ`package.json`がない場合、以下のコマンドで生成できる。
 
 `yarn init`
 
-3. yarnでパッケージをインストール
+**3. yarnでパッケージをインストール**
 
 `package.json`に記載されたモジュールをインストールする。
 
 `yarn`
 
-4. パッケージの追加
+**4. パッケージの追加**
 
 以下のコマンドでパッケージのインストールと`package.json`への追加ができる。
 
@@ -45,7 +45,7 @@ npmよりインストールが速い。
 
 `yarn remove`
 
-5. マニフェストファイルへ読み込みのpathを記載
+**5. マニフェストファイルへ読み込みのpathを記載**
 
 (app/assets/javascripts/application.js)
 
@@ -63,7 +63,7 @@ npmよりインストールが速い。
 @import 'bootstrap-material-design/dist/css/bootstrap-material-design';
 ```
 
-6. application.erb.htmlの記述
+**6. application.erb.htmlの記述**
 
 `app/views/layouts/application.erb.html`で
 
