@@ -42,5 +42,7 @@ developブランチにいくつかのfeatureブランチがマージされ、リ
 5. 問題があれば修正し、developブランチへマージする。問題がなければ、masterブランチへマージする。
 
 ### 参考
+
 [git flowについて](https://github.com/DaichiSaito/insta_clone/wiki/git-flow%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+
 [Git-flowって何？](https://qiita.com/KosukeSone/items/514dd24828b485c69a05)
