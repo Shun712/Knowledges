@@ -37,3 +37,7 @@ Gemfileに以下を記述して、インストール。
 class User < ApplicationRecord
 end
 ```
+
+### 参考
+
+[【Rails】annotateの使い方](https://qiita.com/koki_develop/items/ae6b5f41c18b2872d527)
