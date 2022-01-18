@@ -36,7 +36,31 @@ def not_authenticated
 end
 ```
 
+# 実装編
+
+```
+class User < ActiveRecord::Base
+  authenticates_with_sorcery!
+
+  validates :password, length: { minimum: 8 }, if: -> { new_record? || changes[:crypted_password] }
+  validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
+  validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
+
+  validates :email, uniqueness: true
+end
+```
+> 暗号化されたパスワード(`crypted_password`)やソルト(`salt`)というカラムをユーザーに編集/閲覧させたくない。
+> 「仮想的な」passwordフィールドを使用し、データベースに暗号化される前のパスワードをビューで扱う。
+> →このpassword属性はカラムに対応していないため、平文のパスワード情報がDBに保存されることは無い。
+> →パスワードは暗号化され、DBに保存される。
+
+> 引用 [【Rails】ログイン機能を実装 -qiita](https://qiita.com/ryota21/items/83a2cfed9e775be58382)
+
+**`if: -> { new_record? || changes[:crypted_password] }`で、ユーザーがパスワード以外のプロフィール項目を更新したい場合に、パスワードの入力を省略できるようになる。**
+
 # 参考
 [【Rails】sorceryについて](https://boku-boc.hatenablog.com/entry/2020/10/10/213625)
 
 [シンプル認証gem sorceryを完全入門するで！！](https://qiita.com/babashunsu/items/9937b0a2e08d318edece)
+
+[【Rails】ログイン機能を実装 -qiita](https://qiita.com/ryota21/items/83a2cfed9e775be58382)
