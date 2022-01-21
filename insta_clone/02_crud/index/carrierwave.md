@@ -117,7 +117,10 @@ irb(main):004:0> user.avatar_identifier
 (models/user.rb)
 ```
 class User < ApplicationRecord
- mount_uploaders :avatars, AvatarUploader #mount_puloadersと複数形になる
+ # mount_puloadersと複数形になる
+ mount_uploaders :avatars, AvatarUploader
+ # 複数の画像を取り扱う場合、serializeメソッドが必要
+ serialize :avatars, JSON
 end
 ```
 (views/users/new.html.erb)
