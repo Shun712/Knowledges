@@ -10,11 +10,11 @@ Redisのデータはすべてメモリ内に保存されるため、高速なデ
 
 # 導入方法
 
-1. Redis のインストール
+**1. Redis のインストール**
 
 `$ brew install redis`
 
-2. Redis サーバーの起動
+**2. Redis サーバーの起動**
 
 `$ redis-server`
 
@@ -22,15 +22,15 @@ Redisのデータはすべてメモリ内に保存されるため、高速なデ
 
 # Railsのセッション管理をRedisにしてみる
 
-1. redis-railsをGemfileに追記
+**1. redis-railsをGemfileに追記**
 
 `gem 'redis-rails`
 
-2. bundle install
+**2. bundle install**
 
 `$ bin/bundle install`
 
-3. `config/initializers/session_store.rb`を新規に作成しセッション管理をRedisにするための設定を記述
+**3. `config/initializers/session_store.rb`を新規に作成しセッション管理をRedisにするための設定を記述**
 ```
 # config/initializers/session_store.rb
 アプリケーション名::Application.config.session_store :redis_store, {
