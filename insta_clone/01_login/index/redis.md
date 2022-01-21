@@ -46,6 +46,19 @@ Redisのデータはすべてメモリ内に保存されるため、高速なデ
 }
 ```
 
+# dump.rdbがカレントディレクトリに生成されてしまう
+
+redis-serverを起動すると、そのディレクトリにdump.rdbが生成されてしまう。
+
+redis-serverの起動時に設定ファイルのパスを指定してあげる必要がある。
+
+`$ redis-server /usr/local/etc/redis.conf`
+
+`$ ls /usr/local/var/db/redis/`
+`dump.rdb`
+
+これで設定通りの場所にdump.rdbが生成される。
+
 # 参考
 
 [Redisとは？RailsにRedisを導入](https://qiita.com/hirotakasasaki/items/9819a4e6e1f33f99213c)
@@ -53,3 +66,5 @@ Redisのデータはすべてメモリ内に保存されるため、高速なデ
 [【Rails入門】Redisでセッションを高速化しよう！キャッシュも解説](https://www.sejuku.net/blog/58218)
 
 [Redisの紹介](https://www.sraoss.co.jp/tech-blog/redis/redis-introduction/)
+
+[dump.rdbがカレントディレクトリに生成されてしまう](https://blog.kotamiyake.me/tech/output-dump-rdb-to-current-directory/)
