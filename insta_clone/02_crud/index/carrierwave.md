@@ -70,14 +70,6 @@ paramsには、フォームから送信された全ての情報が格納され�
 
 `@original_filename`は、アップロードしたファイルの名前(120185.png)で、この値がデータベースに保存される。
 
-また、**アップロードした画像は「public/uploads/モデル名/画像のカラム名/id」配下に保存されます**。
-
-[![Image from Gyazo](https://i.gyazo.com/0adc5d72d56a803549f1dec7356e24d4.png)](https://gyazo.com/0adc5d72d56a803549f1dec7356e24d4)
-
-まとめると、アップロード画像のファイル名はDBに保存され、実際の画像は`public/uploads/モデル名/画像のカラム名/id`に保存される。
-
-**画像は、`Github`などにアップロードする必要がないので`.gitignore`に`/public/uploads`を指定してGit管理下から除外する。**
-
 **6. アバター画像の表示**
 
 アバター画像を表示させるには、まずは画像が保存されている場所(パス)を取得する必要がある。
@@ -109,6 +101,16 @@ irb(main):004:0> user.avatar_identifier
   </p>
 <% end %>
 ```
+
+# アップロードファイルをgit管理対象外に設定
+
+**アップロードした画像は「public/uploads/モデル名/画像のカラム名/id」配下に保存されます**。
+
+[![Image from Gyazo](https://i.gyazo.com/0adc5d72d56a803549f1dec7356e24d4.png)](https://gyazo.com/0adc5d72d56a803549f1dec7356e24d4)
+
+まとめると、アップロード画像のファイル名はDBに保存され、実際の画像は`public/uploads/モデル名/画像のカラム名/id`に保存される。
+
+**画像は、`Github`などにアップロードする必要がないので`.gitignore`に`/public/uploads`を指定してGit管理下から除外する。**
 
 # 複数画像の場合
 
