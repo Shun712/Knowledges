@@ -58,3 +58,11 @@ end
 `remote_images_urls:` というカラムは、「https://~~~.jpg」のような外部から取ってきた画像を設定する。
 「remote_カラム名_url」とすれば使える。
 > [Github: carrierwave](https://github.com/carrierwaveuploader/carrierwave#uploading-files-from-a-remote-location)
+
+# 参考
+
+[Github: carrierwave](https://github.com/carrierwaveuploader/carrierwave#uploading-files-from-a-remote-location)
+
+[gem Fakerでリアルなダミーデータを作るよ - qiita](https://qiita.com/tanutanu/items/4006bd868affa535adb0)
+
+[【Rails】seed.rbとFakerを使ってダミーデータ作ってみた - Zenn](https://zenn.dev/yukihaga/articles/e0cf573f3c545e)
