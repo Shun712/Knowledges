@@ -8,35 +8,32 @@ SwiperはJavaScriptライブラリで、JQueryに依存せずJavaScript単体で
 
 # 実装手順
 
-### 1. HTMLの実装
+### 1. HTML(slim)の実装
 
 ```
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    ...
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
+/! Slider main container
+.swiper
+  /! Additional required wrapper
+  .swiper-wrapper
+    /! Slides
+    .swiper-slide Slide 1
+    .swiper-slide Slide 2
+    .swiper-slide Slide 3
+    | \...
+  /! If we need pagination
+  .swiper-pagination
+  /! If we need navigation buttons
+  .swiper-button-prev
+  .swiper-button-next
+  /! If we need scrollbar
+  .swiper-scrollbar
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div>
 ```
 
 Swiperが用意している`swiper-wrapper`クラスや
 `swiper-slide`クラスなどに適用するためのコードが用意されている。
 
-`<!-- If we need...`はオプション部分である。
+`/! If we need...`はオプション部分である。
 
 ### 2. CSS、JSの適用方法
 
