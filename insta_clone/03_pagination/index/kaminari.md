@@ -20,7 +20,7 @@ rubyのgemの一つでページネーションを簡単に実装するための�
 
 `rails g kaminari:views bootstrap4`
 
-このコマンドによって、bootstrapなどのcssのフレームワークを取り入れたビューファイル(slimで実装していたらslim形式で)が自動で作成される。
+このコマンドによって、bootstrapのフレームワークを取り入れたビューファイル(slimで実装していたらslim形式で)が作成される。
 
 > [Github:kaminari(#for-hamlslim-users)](https://github.com/kaminari/kaminari#general-configuration-options)
 > [Github:kaminari(#themes)](https://github.com/kaminari/kaminari#general-configuration-options)
