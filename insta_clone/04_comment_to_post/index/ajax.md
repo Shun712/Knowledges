@@ -17,6 +17,20 @@ webブラウザから一部の情報をリクエストするので、それ以�
 
 > [非同期通信Ajaxをできるだけ分かりやすく説明してみた](https://applingo.tokyo/article/654)
 
+①　ブラウザから'js'形式のリクエストを送る
+↓
+
+②　ルーティングでどこのコントローラで何のアクションをするのかを判定
+↓
+
+③　コントローラにてアクション内の項目を実行(formatで場合分けしている際には、format.js内のアクションを実行)
+↓
+
+④　コントローラのアクションに応じてモデルの内容を更新、削除、インスタンスの取得などを行う
+↓
+
+⑤　app/views/コントローラ名/アクション名.js.erbを探し出し、レンダリングする。
+
 # XMLHttpRequest
 
 > クライアントとサーバーの間でデータを伝送するための機能をクライアント側で提供する API です。
@@ -42,4 +56,8 @@ Ajaxを使って、動的なWebページを作成するときに、HTML・XML上
 # 参考
 [初心者目線でAjaxの説明 - qiita](https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9)
 
-[非同期通信Ajaxをできるだけ分かりやすく説明してみた](https://applingo.tokyo/article/654)
+[非同期通信Ajaxをできるだけ分かりやすく説明してみた - qiita](https://applingo.tokyo/article/654)
+
+[Ajaxを用いた動的なコメント投稿・削除機能の実装で学ぶRuby on Rails](https://ysk-pro.hatenablog.com/entry/2018/02/10/101739)
+
+[Railsで remote: true と js.erbを使って簡単にAjax(非同期通信)を実装しよう！(いいね機能のデモ付) - qiita](https://qiita.com/motoki0208/items/45211df065e0c037d032)
