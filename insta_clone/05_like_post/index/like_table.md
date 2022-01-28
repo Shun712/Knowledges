@@ -90,3 +90,9 @@ def create
 ```
 createアクションでは、該当の投稿を@postに格納し、current_userが所有する`like_posts`に@postを追加する。
 逆にdestroyアクションにおいては「いいね」した該当の投稿を@postに格納し、current_userが所有する`like_posts`から@postを削除する。
+
+# 参考
+
+[【初心者向け】丁寧すぎるRails『アソシエーション』チュートリアル【幾ら何でも】【完璧にわかる】 - qiita](https://qiita.com/kazukimatsumoto/items/14bdff681ec5ddac26d1)
+
+[Railsで remote: true と js.erbを使って簡単にAjax(非同期通信)を実装しよう！(いいね機能のデモ付) - qiita](https://qiita.com/motoki0208/items/45211df065e0c037d032)
