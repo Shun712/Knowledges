@@ -17,12 +17,12 @@ end
 
 ## destroy
 ActiveReordを介して、指定した条件のレコードを削除する。
-Modelに`dependet: :destroy`があると、その関連も一緒に削除される。(Authorを削除したら、booksも削除される。)
+Modelに`dependent: :destroy`があると、その関連も一緒に削除される。(Authorを削除したら、booksも削除される。)
 
 これがなければ、Authorは削除されても、Booksだけが残ってしまう。
 
 ## 補足
-`dependet: :destroy`のほかに`dependet: :delet_all`がある（has_one関連の場合、`dependet: :delete`）
+`dependent: :destroy`のほかに`dependent: :delete_all`がある（has_one関連の場合、`dependent: :delete`）
 この場合、destroyを実行すると、ActiveRecordを介さないで、直接SQLを実行して削除する。
 
 > `:destroy`を設定した場合と`:delete_all`を設定した場合で、destroyを実行してログを見てみるとわかるが、前者はDELETEクエリが関連の数だけ実行されるが、後者だとDELETEクエリ１回だけ実行する。
