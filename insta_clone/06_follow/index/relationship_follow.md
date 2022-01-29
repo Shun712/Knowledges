@@ -46,10 +46,10 @@ end
 ```
   # foreign_keyで定義することで、親モデル(follower)と関連付けられる。
   has_many :active_relationships, class_name: 'Relationship', foreign_key: 'follower_id', dependent: :destroy
-  
+
   # foreign_keyで定義することで、親モデル(followed)と関連付けられる。
   has_many :passive_relationships, class_name: 'Relationship', foreign_key: 'followed_id', dependent: :destroy
-  
+
   # フォローされる側(followed)のユーザーを中間テーブル(active_relationships)を介して取得することを「following」と定義
   has_many :following, through: :active_relationships, source: :followed
   # フォローする側(follower)のユーザーを中間テーブル(passive_relationships)を介して取得することを「followers」と定義
