@@ -49,6 +49,31 @@ XMLHttpRequestはJavaScriptの組み込みオブジェクトである。
 
 Ajaxを使って、動的なWebページを作成するときに、HTML・XML上のどの要素を変更するかを指定する。そこでDOMはHTMLやXMLを「ツリー構造」として展開し、アプリケーション側に文章の情報を伝え、加工や変更をしやすくする。
 
+# 具体的なやり取り
+
+`$('#like_area-#{@post.id}').html("#{j render('posts/unlike', post: @post)}")`
+
+#### ('#like_area-#{@post.id}')
+#はid 属性の値に基づき要素を選択している。つまり、各投稿の`like_area`を選択している。
+
+#### .html("#{j render('posts/unlike', post: @post)}")
+`.html`はマッチした要素内に挿入するHTML文字列を指定するので`#like_area-#{@post.id}`に対して`#{j render('posts/unlike', post: @post)}`が挿入される。
+ちなみに、`.html`はjQuery(JavaScript)のメソッドなので、**JSはクライアント側で実行される**。
+
+#### {j render('posts/unlike', post: @post)}
+`j`は改行コード、シングルクオート、ダブルクオートをJavaScript用にエスケープしてくれるヘルパメソッド。ここでは`render('posts/unlike', post: @post)`の部分をJavaScriptで正しく扱えるようにエスケープしてくれる。  
+例えば、`"<p class="`  
+が一つのまとまりだと認識されてしまう。
+
+#### render('posts/unlike', post: @post)
+`posts/unlike`内のpost変数に@postを代入したposts/unlikeの部分テンプレートをrenderしている。  
+
+以上のことから、サーバーがレスポンスヘッダーのContent-Typeに`text/javascript`としてブラウザに送り、ブラウザがJSと認識する。  
+つまり、`html.slim`だろうが`js.slim`だろうが本質は「テキストを生成してHTTPのレスポンスボディに設定する」ことである。  
+結論は、JSはブラウザ側で実行されるというわけである。
+
+> [js.slimの仕組みについて](https://tech-essentials.work/questions/146)
+
 # 参考
 [初心者目線でAjaxの説明 - qiita](https://qiita.com/hisamura333/items/e3ea6ae549eb09b7efb9)
 
