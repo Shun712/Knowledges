@@ -99,7 +99,7 @@ end
   def following?(other_user)
     following.include?(other_user)
   end
-  
+
   def feed
     # 自分と自分のフォローしているユーザーだけフィードに表示するよう
     Post.where(user_id: following_ids << id)
