@@ -1,4 +1,4 @@
-# UserとUserの多対多(M:N)を設計(自己結合)
+# UserとUserの多対多(M:N)を設計
 多対多で関連しているため、中間テーブルが存在する。
 関連を表現しているため、Relationshipモデルと名付ける。
 中間テーブルなので、各親テーブルの`primary_key`を`foreign_key`として保存する。
@@ -108,3 +108,8 @@ end
 
 #### 4. ビューの実装
 コメント機能のでAjaxの実装と被るので割愛。
+
+# 参考
+[【初心者向け】丁寧すぎるRails『アソシエーション』チュートリアル【幾ら何でも】【完璧にわかる】 - qiita](https://qiita.com/kazukimatsumoto/items/14bdff681ec5ddac26d1#%E3%81%8A%E6%B0%97%E3%81%AB%E5%85%A5%E3%82%8A%E6%A9%9F%E8%83%BD%E3%82%92er%E5%9B%B3%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E8%A8%AD%E8%A8%88%E3%81%97%E3%82%88%E3%81%86)
+
+[Railsドキュメント - has_many](https://railsdoc.com/page/has_many)
