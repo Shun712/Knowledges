@@ -52,6 +52,7 @@ end
 
   # フォローされる側(followed)のユーザーを中間テーブル(active_relationships)を介して取得することを「following」と定義
   has_many :following, through: :active_relationships, source: :followed
+
   # フォローする側(follower)のユーザーを中間テーブル(passive_relationships)を介して取得することを「followers」と定義
   has_many :followers, through: :passive_relationships, source: :follower
 ```
@@ -65,6 +66,11 @@ class Relationship < ApplicationRecord
   validates :follower_id, uniqueness: { scope: :followed_id }
 end
 ```
+`has_many :active_relationships, class_name: 'Relationship', foreign_key: 'follower_id', dependent: :destroy`  
+までで実装したassociationのみだと、紐づくidしか取得できず、ユーザー名を取得することができない。
+そこで、  
+`has_many :following, through: :active_relationships, source: :followed`  
+と記述する必要が出てくる。
 
 #### 3. コントローラーの実装
 (app/controllers/relationships_controller.rb)
