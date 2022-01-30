@@ -14,7 +14,7 @@
 params[:email]
 のような形で`text_field`に入力された値を取得する。
 
-# form_with model: @￰model
+# form_with model: @model
 
 モデルに入っているものが**①新しく作られたものの場合、と②既存のものを呼び出した場合、で処理が変わってくる**
 
@@ -26,15 +26,15 @@ params[:email]
 ```
 
 #### ①. 新しく作られたものが渡された場合  
-モデル(@￰user)の中身が空であることから、**createメソッド**を呼び出す
+モデル(@user)の中身が空であることから、**createメソッド**を呼び出す
 
 #### ②. 既存のものが渡された場合
 `new.html.erb`と`edit.html.erb`のフォーム部分は全くの一緒  
-モデル(@￰user)の中身があることから**updateメソッド**を呼び出すことを判断
+モデル(@user)の中身があることから**updateメソッド**を呼び出すことを判断
 
 [![Image from Gyazo](https://i.gyazo.com/4a3bb257ace674fb6c70e5d01a038ce9.png)](https://gyazo.com/4a3bb257ace674fb6c70e5d01a038ce9)
 
-#  form_with model: [@￰modelA, @￰modelB]
+#  form_with model: [@modelA, @modelB]
 ```
 resources :tweets do
   resources :comments only: [:index, :create]
