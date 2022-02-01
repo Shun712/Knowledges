@@ -1,6 +1,6 @@
 # uniqueness: scope を使ったユニーク制約方法
 
-`uniqueness: scope`を実装するとユニーク制約をできる。  
+`uniqueness: scope`はuniqueness制約をかける条件を制限できる。  
 以下はコンソールで試したことである。
 
 ```
