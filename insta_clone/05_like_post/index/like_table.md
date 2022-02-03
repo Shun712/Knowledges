@@ -5,14 +5,14 @@
 ### 1.  Likeモデルとassociationを設定
 中間テーブルはたくさん持たれる側なので、外部キーを2つ指定する形になるので、
 `belongs_to :user`と`belongs_to :post`を設定する。
-```
+```ruby
 class Like < ApplicationRecord
   belongs_to :user
   belongs_to :post
 end
 ```
 
-```
+```ruby
 class CreateLikes < ActiveRecord::Migration[5.2]
   def change
     create_table :likes do |t|
@@ -26,7 +26,7 @@ class CreateLikes < ActiveRecord::Migration[5.2]
   end
 end
 ```
-```
+```ruby
 class User < ApplicationRecord
 .
 .
@@ -43,11 +43,11 @@ class User < ApplicationRecord
 Postも同様に設定する。
 
 ### 2. Likeモデルに適切なバリテーションを設定
-```
+```ruby
 class Like < ApplicationRecord
   belongs_to :user
   belongs_to :post
-  
+
   validates :user_id, uniqueness: { scope: :post_id }
 end
 ```
@@ -55,7 +55,7 @@ end
 バリテーションでは、各postは同じuserに「いいね」されないようにLikeモデルのuserカラムに一意性制約をつけている。
 
 ### 3. like, unlike, like?のモデルメソッドを定義
-```
+```ruby
   # 「いいね」したpostをlike_postsへpush
   def like(post)
     like_posts << post
@@ -77,7 +77,7 @@ end
 Ajaxの実装と同様の内容なので割愛。
 
 ### 5. コントローラーの実装
-```
+```ruby
 def create
     @post = Post.find(params[:post_id])
     current_user.like(@post)
