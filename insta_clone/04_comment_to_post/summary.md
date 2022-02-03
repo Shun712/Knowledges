@@ -44,4 +44,4 @@
 つまり、`index`、`new`、`create`アクションについては、どのpostのidに紐づくか示さないと一意に保つことができない。
 一方、`edit`、`update`、`destroy`アクションについては、postのidがなくても、commentのidでどのコメントか明らかになる。
 
-> [shalloとは?](https://github.com/Shun712/Knowledges/blob/master/insta_clone/04_comment_to_post/index/shallow.md)
+> [shallowとは?](https://github.com/Shun712/Knowledges/blob/master/insta_clone/04_comment_to_post/index/shallow.md)
