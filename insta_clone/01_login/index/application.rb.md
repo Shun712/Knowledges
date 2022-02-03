@@ -1,6 +1,6 @@
 # ファイル生成を制限
 
-```
+```ruby
 puts class Application < Rails::Application
 
  #以下のように、generateコマンド時に生成されるファイルに制限をかける
