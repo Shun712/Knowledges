@@ -31,7 +31,7 @@ Redisのデータはすべてメモリ内に保存されるため、高速なデ
 `$ bin/bundle install`
 
 **3. `config/initializers/session_store.rb`を新規に作成しセッション管理をRedisにするための設定を記述**
-```
+```ruby
 # config/initializers/session_store.rb
 アプリケーション名::Application.config.session_store :redis_store, {
   servers: [
