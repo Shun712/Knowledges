@@ -36,7 +36,7 @@ avatarカラムには、以下のように **「画像のデータ」ではな�
 
 データベースに保存できるように`users_controller`の`user_params`に`avatar`カラムを追加する。
 
-```
+```ruby
 def user_params
   params.require(:user).permit(:nickname, :age, :avatar) # 変更後
 end
@@ -46,7 +46,7 @@ end
 
 ユーザーのアバター画像のアップロード機能を追加するので、Userモデルに先ほど作成したアバター画像用の「avatarカラム」と「AvatarUploaderクラス」を紐づけする。
 
-```
+```ruby
 class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 end
@@ -57,7 +57,7 @@ end
 
 既存のフォームに`file_filed`でファイル選択ボックスを作成する。
 
-```
+```html
 <div class="field">
   <%= form.label :avatar %>
   <%= form.file_field :avatar %>
@@ -78,7 +78,7 @@ Userモデルに、`AvatarUploader`クラスと`avatar`カラムを紐づけた�
 
 [![Image from Gyazo](https://i.gyazo.com/631b1dc18ffc217631375e3bfecca096.png)](https://gyazo.com/631b1dc18ffc217631375e3bfecca096)
 
-```
+```ruby
 irb(main):001:0> user = User.first
   User Load (0.6ms)  SELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1
 => #<User id: 1, nickname: "ピカ子", age: 18, created_at: "2020-02-25 13:21:31", updated_at: "2020-02-25 13:43:54", avatar: "120185.png">
@@ -93,7 +93,7 @@ irb(main):004:0> user.avatar_identifier
 => "120185.png"
 ```
 
-```
+```html
 <% if @user.avatar? %>  <!-- アップロード画像がある場合に実行する -->
   <p>
     <strong>Avatar:</strong>
@@ -117,7 +117,7 @@ irb(main):004:0> user.avatar_identifier
 `bundle exec rails g migration add_avatars_to_users pictures:json`
 
 (models/user.rb)
-```
+```ruby
 class User < ApplicationRecord
  # mount_puloadersと複数形になる
  mount_uploaders :avatars, AvatarUploader
@@ -126,19 +126,19 @@ class User < ApplicationRecord
 end
 ```
 (views/users/new.html.erb)
-```
+```ruby
 <%= form_with(model: User.new, multipart: true, local: true) do |form| %>
  <%= form.file_field :avatars, multiple: true %>
 <% end %>
 ```
 (controllers/users_controller.rb)
-```
+```ruby
 def user_params
  params.require(:user).permit(..., {avatars: []})
 end
 ```
 (views/users/show.html.erb)
-```
+```ruby
 <% @user.avatars.each do |avatar| %>
  <%= image_tag(avatar.url, size: "30x30") unless avatar.file.nil? %>
 <% end %>
