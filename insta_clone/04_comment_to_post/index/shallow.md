@@ -1,6 +1,6 @@
 # shallowのルーティング
 
-```
+```ruby
 resources :posts do
   resources :comments, shallow: true
 end
