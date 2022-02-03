@@ -4,7 +4,7 @@ ActiveRecordでよく使う削除系インスタンスメソッドを整理す�
 
 # 前提
 
-```
+```ruby
 class Author < ApplicationRecord
   has_many :books, dependent: :destroy
 end
