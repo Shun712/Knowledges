@@ -3,7 +3,7 @@
 `uniqueness: scope`はuniqueness制約をかける条件を制限できる。  
 以下はコンソールで試したことである。
 
-```
+```ruby
 class Like < ApplicationRecord
   belongs_to :user
   belongs_to :post
@@ -13,7 +13,7 @@ end
 ```
 バリテーションでは、各postは同じuserに「いいね」されないようにLikeモデルのuserカラムに一意性制約をつけている。
 
-```
+```ruby
 [1] pry(main)> post = Post.first
 
 # post に user_id:1 が「いいね」する
@@ -37,7 +37,7 @@ end
 
 モデルだけでなく、データベース側でも制約を設定する場合は、両方のカラムに`unique`インデックスを作成する。
 
-```
+```ruby
 class AddUniqueIndexToLikes < ActiveRecord::Migration
   def change
     add_index :likes, [:user_id, :post_id], unique: true
