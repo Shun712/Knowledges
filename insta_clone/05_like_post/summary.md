@@ -12,14 +12,14 @@
 #### 1.  Likeモデルとassociationを設定
 中間テーブルはたくさん持たれる側なので、外部キーを2つ指定する形になるので、
 `belongs_to :user`と`belongs_to :post`を設定する。
-```
+```ruby
 class Like < ApplicationRecord
   belongs_to :user
   belongs_to :post
 end
 ```
 
-```
+```ruby
 class CreateLikes < ActiveRecord::Migration[5.2]
   def change
     create_table :likes do |t|
@@ -33,7 +33,7 @@ class CreateLikes < ActiveRecord::Migration[5.2]
   end
 end
 ```
-```
+```ruby
 class User < ApplicationRecord
 .
 .
@@ -50,11 +50,11 @@ class User < ApplicationRecord
 Postも同様に設定する。
 
 #### 2. Likeモデルに適切なバリテーションを設定
-```
+```ruby
 class Like < ApplicationRecord
   belongs_to :user
   belongs_to :post
-  
+
   validates :user_id, uniqueness: { scope: :post_id }
 end
 ```
@@ -62,12 +62,12 @@ end
 バリテーションでは、各postは同じuserに「いいね」されないようにLikeモデルのuserカラムに一意性制約をつけている。
 
 #### 3. like, unlike, like?のモデルメソッドを定義
-```
+```ruby
   # 「いいね」したpostをlike_postsへpush
   def like(post)
     like_posts << post
   end
-  
+
   # 「いいね」したpostをlike_postsから削除
   def unlike(post)
     like_posts.destroy(post)
@@ -84,7 +84,7 @@ end
 04 コメント機能でAjaxの実装と同様の内容なので割愛。
 
 #### 5. コントローラーの実装
-```
+```ruby
 def create
     @post = Post.find(params[:post_id])
     current_user.like(@post)
@@ -99,8 +99,8 @@ createアクションでは、該当の投稿を@postに格納し、current_user
 逆にdestroyアクションにおいては「いいね」した該当の投稿を@postに格納し、current_userが所有する`like_posts`から@postを削除する。
 
 ## 学んだこと
-- `uniqueness: scope`を実装するとユニーク制約をできる。以下はコンソールで試したことである。
-```
+- `uniqueness: scope`を実装するとuniqueness制約をかける条件を制限できる。
+```ruby
 [1] pry(main)> post = Post.first
   
  
@@ -122,7 +122,7 @@ createアクションでは、該当の投稿を@postに格納し、current_user
 ```
 
 ## 疑問点
-```
+```ruby
 def create
     @post = Post.find(params[:post_id])
     current_user.like(@post)
@@ -133,10 +133,10 @@ def create
     current_user.unlike(@post)
   end
 ```
-```
+```ruby
 resources :likes, only: %i[create destroy]
 ```
-```
+```ruby
 likes POST   /likes(.:format)        likes#create
 like DELETE  /likes/:id(.:format)    likes#destroy
 ```
