@@ -77,7 +77,7 @@ npmよりインストールが速い。
 
 (app/config/webpack/environment.js)
 
-```
+```javascript
 const { environment } = require('@rails/webpacker') 
 const webpack = require('webpack') 
  environment.plugins.append('Provide', 
