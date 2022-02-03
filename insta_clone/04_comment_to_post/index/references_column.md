@@ -3,18 +3,18 @@
 Railsのマイグレーション機能で、`reference`は簡単にリレーション用のカラムを追加することができる。
 
 UserモデルとPostモデルがあると仮定する。
-```
+```ruby
 class User < ApplicationRecord
   has_many :posts
 end
 ```
-```
+```ruby
 class Post < ApplicationRecord
   belongs_to :user
 end
 ```
 `$ rails g model post user:references body:text`
-```
+```ruby
 def change
   create_table :posts do |t|
     t.references :user
@@ -31,7 +31,7 @@ end
 
 ちなみにもう一つ方法があり、`user_id`カラムが追加されるので、**`user_id`を明記しておくのとほぼ同じである**。
 
-```
+```ruby
 def change
   create_table :posts do |t|
     t.text :body    # 記事本文
@@ -54,7 +54,7 @@ end
 ただし、外部キー制約があると困る場面がある。  
 例えば、ユーザーがした投稿は、ユーザーが退会してもそのまま残したいという場合に、
 
-```
+```ruby
 def change
   create_table :posts do |t|
     t.references :user, foreign_key: true
