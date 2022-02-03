@@ -4,7 +4,7 @@
 
 # form_with url: url_path
 
-```
+```ruby
 <%= form_with url: users_path do |form| # urlを渡している %>
   <%= form.text_field :email %>
   <%= form.submit %>
@@ -18,7 +18,7 @@ params[:email]
 
 モデルに入っているものが**①新しく作られたものの場合、と②既存のものを呼び出した場合、で処理が変わってくる**
 
-```
+```ruby
 <%= form_with model: @user do |form| # modelを渡している %>
   <%= form.text_field :email %>
   <%= form.submit %>
@@ -35,13 +35,13 @@ params[:email]
 [![Image from Gyazo](https://i.gyazo.com/4a3bb257ace674fb6c70e5d01a038ce9.png)](https://gyazo.com/4a3bb257ace674fb6c70e5d01a038ce9)
 
 #  form_with model: [@modelA, @modelB]
-```
+```ruby
 resources :tweets do
   resources :comments only: [:index, :create]
 end
 ```
 (app/controllers/comments_controller.rb)
-```
+```ruby
 def index
   # モデルを2つ用意
   @tweet = Tweet.find(params[:id])
@@ -49,7 +49,7 @@ def index
 end
 ```
 (app/views/comments/index.html.erb)
-```
+```ruby
 <%= form_with(model:[@tweet, @comment]) do |form| %>
   <%= form.text_field :content %>
   <%= form.submit %>
