@@ -10,7 +10,7 @@ SwiperはJavaScriptライブラリで、JQueryに依存せずJavaScript単体で
 
 ### 1. HTML(slim)の実装
 
-```
+```haml
 /! Slider main container
 .swiper
   /! Additional required wrapper
@@ -55,7 +55,7 @@ CDNとは「Content Delivery Network（コンテンツデリバリーネット�
 
 #### 設定方法
 
-```
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -100,7 +100,7 @@ JavaScript(node.js)のパッケージマネージャで、2016年にFaceBookが�
 #### 3. 導入したファイルの読み込み設定
 
 (【Ver6以降】assets/javascript/application.js)
-```
+```javascript
 //= require swiper/swiper-bundle.js
 //= require swiper.js
 
@@ -108,13 +108,13 @@ JavaScript(node.js)のパッケージマネージャで、2016年にFaceBookが�
 ```
 
 (【Ver６】assets/stylesheets/application.scss)
-```
+```javascript
 @import 'swiper/swiper-bundle';
 ```
 
 (config/initializers/assets.rb)
 
-```
+```ruby
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 ```
 
@@ -125,7 +125,7 @@ CDNから持ってくるJSファイル、もしくはYarnでインストール�
 このJSファイルによって、自分が適用したいオプションを設定することができる。
 
 (app/assets/javascripts/swiper(任意の名前).js)
-```
+```javascript
 // var swiper = と始めるのではなく、$(function(){ で始める(jQueryでの設定)
 
 $(function() {
@@ -145,7 +145,7 @@ $(function() {
 #### 5. CSSの追加設定
 
 (application.css)
-```
+```css
 .swiper {
     width: 600px;
     height: 300px;
