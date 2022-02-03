@@ -4,7 +4,7 @@
 
 # ファイルの詳細
 
-```
+```ruby
 development:
   adapter: mysql2
   encoding: utf8
@@ -33,7 +33,7 @@ production:
   host: localhost
 ```
 
-```
+```ruby
 adapter:   使用するデータベース種類
 encoding:  文字コード
 reconnect: 再接続するかどうか
@@ -46,7 +46,7 @@ host:      MySQLが動作しているホスト名
 
 - MySQL接続用のアカウント作成
 
-```
+```ruby
 $ mysql -u root
 :
 :
@@ -54,7 +54,7 @@ mysql> create user 'ユーザー名'@'localhost' identified by 'パスワード'
 ```
 `$ mysql -u root`でMySQLに接続をしアカウント名、パスワード、ホスト名を設定する。
 
-```
+```ruby
 mysql> select User,Host from mysql.user;
 :
 :
@@ -64,7 +64,7 @@ mysql> grant all on *.* to '[ユーザー名]'@'localhost';
 
 - database.ymlの書き換え
 
-```
+```ruby
 development:
   adapter: mysql2
   encoding: utf8
