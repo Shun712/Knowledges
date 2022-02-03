@@ -38,7 +38,7 @@ end
 
 # 実装編
 
-```
+```ruby
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
