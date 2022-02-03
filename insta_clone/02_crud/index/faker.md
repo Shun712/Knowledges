@@ -6,7 +6,7 @@
 
 #### 1. Fakerのインストール
 
-```
+```ruby
 group :development, :test do
   gem 'faker'
 end
@@ -25,13 +25,13 @@ db # 関係あるファイルだけ表示
 ```
 
 (db/seeds.rb)
-```
+```ruby
 require './db/seeds/users'
 require './db/seeds/posts'
 ```
 
 (db/seeds/users.rb)
-```
+```ruby
 puts 'Start inserting seed "users" ...'
 10.times do
   user = User.create(
@@ -47,7 +47,7 @@ end
 また、最後にputsを利用して、出力されるキャラクターの名前を書き出している。
 
 (db/seeds/posts.rb)
-```
+```ruby
 puts 'Start inserting seed "posts" ...'
 User.limit(10).each do |user|
   post = user.posts.create(body: Faker::Hacker.say_something_smart, remote_images_urls: %w[https://picsum.photos/350/350/?random https://picsum.photos/350/350/?random])
