@@ -31,7 +31,7 @@
 
 #### 1. 設計通りに下準備
 データベースを設定する。
-```
+```ruby
 class CreateRelationships < ActiveRecord::Migration[5.2]
   def change
     create_table :relationships do |t|
@@ -49,7 +49,7 @@ class CreateRelationships < ActiveRecord::Migration[5.2]
 end
 ```
 ルーティングを設定する。
-```
+```ruby
   resources :relationships, only: %i[create destroy]
 ```
 
@@ -57,7 +57,7 @@ end
 `class_name`というオプションを使えば、Userモデルを**Followerモデル**や**Followedモデルとモデル名を擬似的に作り出すことができる**。
 `foreign_key`は、 参照先のテーブルの外部キーのカラム名を指定できる。つまり、親の`primary_key`を指定してあげれば、「フォローする側(follower)のUserからみた」と言う情報も取得することができる。
 (app/models/user.rb)
-```
+```ruby
   # foreign_keyで定義することで、親モデル(follower)と関連付けられる。
   has_many :active_relationships, class_name: 'Relationship', foreign_key: 'follower_id', dependent: :destroy
   
@@ -70,7 +70,7 @@ end
   has_many :followers, through: :passive_relationships, source: :follower
 ```
 (app/models/relationship.rb)
-```
+```ruby
 class Relationship < ApplicationRecord
   belongs_to :follower, class_name: 'User'
   belongs_to :followed, class_name: 'User'
@@ -82,7 +82,7 @@ end
 
 #### 3. コントローラーの実装
 (app/controllers/relationships_controller.rb)
-```
+```ruby
 class RelationshipsController < ApplicationController
 
   def create
@@ -101,7 +101,7 @@ end
 ```
 ファットコントローラーにならないために、Userモデルにフォロー、アンフォローメソッドを定義
 (app/models/user.rb)
-```
+```ruby
   def follow(other_user)
     following << other_user
   end
