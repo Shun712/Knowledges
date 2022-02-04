@@ -144,6 +144,8 @@ end
  > [rubyでselfを省略できる時、できない時 - qiita](https://qiita.com/akira-hamada/items/4132d2fda7e420073ab7)
 
 # 参考
+[プルリク](https://tech-essentials.work/courses/11/tasks/14/outputs/1241)
+
 [【初心者向け】丁寧すぎるRails『アソシエーション』チュートリアル【幾ら何でも】【完璧にわかる】 - qiita](https://qiita.com/kazukimatsumoto/items/14bdff681ec5ddac26d1#%E3%81%8A%E6%B0%97%E3%81%AB%E5%85%A5%E3%82%8A%E6%A9%9F%E8%83%BD%E3%82%92er%E5%9B%B3%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E8%A8%AD%E8%A8%88%E3%81%97%E3%82%88%E3%81%86)
 
 [Railsドキュメント - has_many](https://railsdoc.com/page/has_many)
