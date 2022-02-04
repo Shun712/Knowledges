@@ -39,6 +39,8 @@ params[:email]
 modelを使うとinputタグのvalueを指定してくれる。
 例えば、検索フォームに入力した値が検索後のページでも値が残っている。
 
+> [ActionView::Helpers::FormHelper](https://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-form_with)
+
 #  form_with model: [@modelA, @modelB]
 ```ruby
 resources :tweets do
