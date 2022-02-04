@@ -34,6 +34,11 @@ params[:email]
 
 [![Image from Gyazo](https://i.gyazo.com/4a3bb257ace674fb6c70e5d01a038ce9.png)](https://gyazo.com/4a3bb257ace674fb6c70e5d01a038ce9)
 
+#### modelオプションのさらなる特徴
+
+modelを使うとinputタグのvalueを指定してくれる。
+例えば、検索フォームに入力した値が検索後のページでも値が残っている。
+
 #  form_with model: [@modelA, @modelB]
 ```ruby
 resources :tweets do
