@@ -88,6 +88,39 @@ boolean型の場合、DBにはinteger型と同じように数値が保存され�
 しかし、boolean型のカラムの場合、enum をあまり実装しない。  
 boolean型のカラムを作成した時二択しかないので、enumを設定しなくてもbooleanだけで十分機能を実装できる。
 
+# 便利なメソッド
+
+#### 確認メソッド
+
+enumには確認メソッドがあり、今enumカラム(blood_type)に入っている定数が何なのか確認する。
+
+```ruby
+user = User.find_by(name: 'programan')
+=> #<User:0x007f82b7b6fe40
+  id: 1,
+  name: "programan",
+  age: 25,
+  blood_type: "A",
+  is_married: false,
+  created_at: Wed, 29 Jan 2020 01:44:45 UTC +00:00,
+  updated_at: Wed, 29 Jan 2020 01:44:45 UTC +00:00>
+
+user.blood_type
+=> "A"
+
+user.A?
+=> true
+user.B?
+=> false
+user.O?
+=> false
+user.AB?
+=> false
+
+user.C?
+NoMethodError: undefined method `C?' for #<User:0x007f82b7b6fe40>
+```
+
 # 参考
 
 [Railsガイド - enum](https://railsguides.jp/active_record_querying.html)
