@@ -31,7 +31,9 @@ SEOの目的は、ホームページの検索ランキングの向上だけで�
 > Google翻訳
 > [meta-tags - github](https://github.com/kpumuk/meta-tags)
 
-主に内部的対策として、`title`, `desciption` の設定をする。
+主に内部的対策として、`title`, `desciption` の設定をする。  
+
+> [gem 'meta-tags'とは?](https://github.com/Shun712/Knowledges/blob/master/insta_clone/14_metatag/index/gem_meta-tags.md)
 
 # 学んだこと
 
