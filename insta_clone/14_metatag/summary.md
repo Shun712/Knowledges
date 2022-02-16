@@ -35,6 +35,13 @@ SEOの目的は、ホームページの検索ランキングの向上だけで�
 
 > [gem 'meta-tags'とは?](https://github.com/Shun712/Knowledges/blob/master/insta_clone/14_metatag/index/gem_meta-tags.md)
 
+# ngrokとは?
+
+ngrokは「エングロック」と発音し、トンネリングを用いて
+ローカルPCのWebサーバーを外部公開できるツールである。
+
+> [ngrokとは?](https://github.com/Shun712/Knowledges/blob/master/insta_clone/14_metatag/index/ngrok.md)
+
 # 学んだこと
 
 リンクを貼った際にページの詳細が表示される仕組みが理解できた。  
