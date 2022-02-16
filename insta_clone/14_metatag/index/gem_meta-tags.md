@@ -4,7 +4,7 @@
 > Google翻訳
 > [meta-tags - github](https://github.com/kpumuk/meta-tags)
 
-内部的対策として、`title`, `desciption` の設定をする。
+主に内部的対策として、`title`, `desciption` の設定をする。
 
 # metaタグとは？
 
