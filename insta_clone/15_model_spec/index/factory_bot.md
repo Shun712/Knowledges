@@ -87,3 +87,5 @@ let{:project} { create(:project, :due_yesterday) }
 [RailsアプリへのRspecとFactory_botの導入手順 - qiita](https://qiita.com/Ushinji/items/522ed01c9c14b680222c)
 
 [【ruby】Railsでファイルアップロードをテストする](https://tanihiro.hatenablog.com/entry/2014/01/09/004022)
+
+[僕がRSpecでsubjectを使わない理由](https://blog.jnito.com/entry/2021/10/09/105651)
