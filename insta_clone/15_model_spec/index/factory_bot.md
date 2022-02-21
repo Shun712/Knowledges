@@ -80,6 +80,8 @@ let{:project} { create(:project, :due_yesterday) }
 
 [チートシート](https://github.com/brennovich/cheat-ruby-sheets/blob/master/factory_bot.md)
 
+[FactoryBot(FactoryGirl)チートシート  - qiita](https://qiita.com/morrr/items/f1d3ac46b029ccddd017)
+
 [Factorybotを使ったテストデータの作成方法 - qiita](https://qiita.com/righteous/items/e5448cb2e7e11ab7d477)
 
 [RailsアプリへのRspecとFactory_botの導入手順 - qiita](https://qiita.com/Ushinji/items/522ed01c9c14b680222c)
