@@ -1,42 +1,41 @@
-# 15 モデルスペックを実装
-
+# 16 システムスペックを実装
 ## やったこと
-## RSpec
-RubyにおけるBDD（振舞駆動開発）のためのテスティングフレームワークである。
+システムスペックを書く。
 
-## テストを書くためのメリット
-開発した機能を確認するために、テストを書くことが大切である。自分がどのように動くコードを書いているのかを記録に残し、常に動くことを確認しながら開発ができるので、確実性を高めることができ最終的に開発時間を節約してくれる。
+- ログイン成功/失敗
+- ログアウトできる
+- ユーザー登録成功/失敗
+- フォローできること
+- フォローをはずせること
+- 投稿一覧が閲覧できる
+- 新規投稿できる
+- 自分の投稿に編集・削除ボタンが表示される
+- 他人の投稿には編集・削除ボタンが表示されない
+- 投稿を更新できる
+- 投稿を削除できる
+- 投稿の詳細画面が閲覧できる
+- 投稿に対していいねできる
+- 投稿に対していいねを外せる
 
-## モデルスペックとは?
-モデルが正しく機能しているかテストし、バリテーションに使われることが多い。
-また、モデルのメソッドが期待通りに動作するかテストする。
+## システムスペック
+ユーザーの立場に立って、想定通りの画面操作が行えるかどうかテストする。
+例えば、リンクをクリックして、フォームに値を入力するなどの操作を一つ一つ行いながらテストする。
+実行速度や保守性の問題を抱えているので、正常系のテスト等に限定することが多い。
 
-## Factory Botとは?
-テスト用データの作成をサポートするgemである。`ActiveRecord`モデルに実装したコールバックなどの資産を直接的に活用してデータの状態やデータ間の関係性などを制御しやすくなる。
+## Capybara
+Webアプリケーションのブランチ操作をシミュレーションできるほか、実際のブラウザと組み合わせてJavaScriptの動作まで含めたテストを行うことができる。
 
-> [Factory Botとは?](https://github.com/Shun712/Knowledges/blob/master/insta_clone/15_model_spec/index/factory_bot.md)
+## webdrivers
+Chromeとやりとりするのに必要なChromeDriverを含む。
 
-## simplecovとは?
-Rspecで書いたテストのカバレッジを算出するツールである。カバレッジとは、コード全体に対して、どの程度の範囲をテストが網羅されているかを計測したものである。
+## 詰まったこと
 
-## 学んだこと
 ```ruby
-1) User インスタンスメソッド like? いいねをした投稿が含まれること
-     Failure/Error: expect { user_a.like?(post_by_user_b) }.to be true
-       You must pass an argument rather than a block to `expect` to use the provided matcher (equal true), or the matcher must implement `supports_block_expectations?`.
-```
-expectに渡すのは、ブロック（中括弧）ではなく丸括弧である。
-- `change`マッチャや`raise_error`マッチャは、expectにブロック（中括弧）を渡す。
-- それ以外は、丸括弧で渡す。
+1) ユーザー登録 フォロー フォローできること
+     Failure/Error: = link_to "確認する", user_url(@user_from)
 
-```ruby
- 1) User インスタンスメソッド like? いいねをした投稿が含まれること
-     Failure/Error:
-       before do
-         user_a.like(post_by_user_b)
-         user_a.like(post_by_user_c)
-       end
-
-       `before` is not available from within an example (e.g. an `it` block) or from constructs that run in the scope of an example (e.g. `before`, `let`, etc). It is only available on an example group (e.g. a `describe` or `context` block).
+     ActionView::Template::Error:
+       Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true
 ```
-`it`ブロック内では、`before`ブロックは使えない。使用する場合は、`describe`や`context`内のブロックで定義する。
+`ActionMailer`を経由しているので、test環境ではhostパラメータを定義し忘れていたためにエラーが発生していた。
+> [パスワードリセットのシステムテストをしていたら、Rails Missing host to link to! のエラーがおでましになった - qiita](https://qiita.com/vinaka/items/aa40d1c70535b8bc7253)
