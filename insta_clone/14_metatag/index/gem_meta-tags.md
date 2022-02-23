@@ -81,7 +81,7 @@ html
 .post-detail.card
 以下省略
 ```
-
+ 
 # 参考
 
 [meta-tags - github](https://github.com/kpumuk/meta-tags)
