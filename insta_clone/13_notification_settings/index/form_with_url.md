@@ -1,4 +1,19 @@
-# form_withのurlオプション
+# ActionView フォームヘルパー
+
+- フォームとは、Webアプリで**サーバーに何かを送るときに使う**。
+- 例えば、ユーザー登録の際にメールアドレス登録やパスワード登録など
+
+フォームでは、**何を・どこに・どのように・どんなinputで送るか**定義されている。
+- どこのURLに
+- どのようなメソッドで
+- どのようなパラメータを送るか
+  - keyとvalueは何か
+- フォームの種類は何か
+  - HTMLのinputで指定する
+  - text_fieldなどがある
+  - 20種類以上もある
+
+# form_with
 
 ```html
 = form_with model: @user, url: mypage_notification_setting_path, method: :patch, local: true do |f|
@@ -42,8 +57,29 @@
     </div>
 </form>
 ```
+action: アクセス先のURL
+method: HTTPメソッド
+type: フォームの入力値の種類(text, email, radio, checkboxなど)
+name: フォームの名前を示している
+value: 値
+
+paramsハッシュの中身は、以下の通りである。
+`{ "user"=>{"notification_on_comment"=>"1", "notification_on_like"=>"1", "notification_on_follow"=>"1"} }`
+このような形で書くことで、`params[:user]`でUserモデルに紐づく全てのハッシュを取得できる。
+
+# Labelタグについて
+ラベルタグを使うと、クリックした際にチェックしたことになる。  
+また、ラベルタグはインプットタグと紐付ける。  
+紐付けにあたっては、labelのforとvalueを同一にする。
+
+# form_witnのオプション
+
+### modelオプション
+
 - modelオプションを使う場合、`form_with`の引数にはモデルクラスのインスタンスを指定する。
-- 今回の場合は、通知設定のため`updateアクション`が動くパスに変換されるが、ユーザー登録や編集の場合は、インスタンスの有無で`createアクション`か`updateアクション`を自動的に振り分けてくれる。
+- 今回の場合は、通知設定のため`updateアクション`が動くパスに変換されるが、ユーザー登録や編集の場合は、インスタンスがDBに保存されているがどうかで`createアクション`か`updateアクション`を自動的に振り分けてくれる。
+
+### urlオプション
 - urlオプションを指定しない場合
 ```html
 <form action="/users/31" accept-charset="UTF-8" method="post">
@@ -54,10 +90,14 @@
 ```
 urlオプションはHTMLに出力すると、form要素のaction属性に変換され、送信されるデータの送信先を指定する。urlオプションを指定しないと、ユーザーの個別IDを送信先にされてしまうが、今回の通知設定は名前空間の`mypage`にしているのでルーティングエラーが発生してしまうため、urlオプションを指定する必要がある。
 - 上記でチェックした通知設定(form要素に`name="user[notification_on_comment]" `としてsubmitされたデータ)は、リクエストパラメータとしてリクエストに添えて送られる。
-  このリクエストパラメータは、コントローラーにおいてparamsメソッドを利用して、取得する。
+  このリクエストパラメータは、コントローラーにおいてparamsメソッドを利用して取得する。
 
 # 参考
 
 [【Rails】form_withを完全に理解した - qiita](https://qiita.com/beanzou/items/e4448b8f84b2de63f770)
 
 [formタグのaction,method属性の使い方と特性〜html,slimでの記述方法〜 - qiita](https://qiita.com/mikuhonda/items/f3126380d3340f3d8a2b)
+
+[【第１回】 Railsガイドの「Action View フォームヘルパー」をひたすらまとめていく 【Formの概要編】](https://tech-essentials.work/course_outputs/201)
+
+[【第2回】 Railsガイドの「Action View フォームヘルパー」をひたすらまとめていく 【基本的なフォームを作成する】](https://tech-essentials.work/course_outputs/202)
