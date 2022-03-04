@@ -29,7 +29,6 @@ Webアプリケーションのブランチ操作をシミュレーションで�
 Chromeとやりとりするのに必要なChromeDriverを含む。
 
 ## 詰まったこと
-
 ```ruby
 1) ユーザー登録 フォロー フォローできること
      Failure/Error: = link_to "確認する", user_url(@user_from)
