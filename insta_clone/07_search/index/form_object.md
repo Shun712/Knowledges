@@ -108,3 +108,5 @@ Feedbackクラスを除けば、ActiveRecordを利用した例と同じコード
 [Form Object という選択肢を検討してみる](https://www.fundely.co.jp/blog/tech/2020/04/08/180009/)
 
 [accepts_nested_attributes_forを使わず、複数の子レコードを保存する](https://moneyforward.com/engineers_blog/2018/12/15/formobject/)
+
+[【Rails】ロジックを1つに集約できるデザインパターン「Form Object」を簡易実装してみた](https://techtechmedia.com/form-object-implementation/)
