@@ -51,4 +51,3 @@ end
 [Railsで最速で管理画面を作る！ - qiita](https://qiita.com/enomotodev/items/5f6d9348207124a41bf9)
 
 [Active Admin 徹底解説 - qiita](https://qiita.com/MariMurotani/items/aed93986e29249fd65e5)
-
