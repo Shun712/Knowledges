@@ -55,3 +55,9 @@ import "../stylesheets/application.scss";
 Rails.start()
 ActiveStorage.start()
 ```
+
+# 参考
+
+[【Rails】bootstrap5の導入方法【コピペでOK】](https://blog.to-ko-s.com/install-bootstrap5/)
+
+[Bootstrap 5 CheatSheet](https://bootstrap-cheatsheet.themeselection.com/)
