@@ -34,3 +34,7 @@
   color:#1da1f2; /*青色にする*/
 }
 ```
+
+# 参考
+
+[Font Awesomeの色とサイズを変える方法 -qiita](https://qiita.com/mzmz__02/items/aaff1d615900cf7d346c)
