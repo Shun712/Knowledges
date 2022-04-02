@@ -7,7 +7,7 @@
 ```ruby
 Rails.application.routes.draw do
   # Deviseのマッピングはするが、skipして何も設定しない
-  devise_for :users, skip: :all
+  devise_for :users, skip: %i[sessions registrations passwords]
   devise_scope :user do
     get 'login', to: 'devise/sessions#new', as: :new_user_session
     post 'login', to: 'devise/sessions#create', as: :user_session
@@ -17,31 +17,23 @@ Rails.application.routes.draw do
     get 'password', to: 'devise/passwords#new', as: :new_user_password
     post 'password', to: 'devise/passwords#create', as: :user_password
     get 'password/edit', to: 'devise/passwords#edit', as: :edit_user_password
-    patch 'password', to: 'devise/passwords#update'
-    put 'password', to: 'devise/passwords#update', as: :update_user_password
-    get 'confirmation/new', to: 'devise/confirmations#new', as: :new_user_confirmation
-    get 'confirmation', to: 'devise/confirmations#show'
-    post 'confirmation', to: 'devise/confirmations#create', as: :user_confirmation
   end
 end
 ```
 
 ルーティング結果
 ```ruby
-                           Prefix Verb       URI         Pattern                    Controller#Action
-                        new_user_session     GET    /login(.:format)             devise/sessions#new
-                            user_session     POST   /login(.:format)             devise/sessions#create
-                    destroy_user_session     DELETE /logout(.:format)            devise/sessions#destroy
-                   new_user_registration     GET    /signup(.:format)            devise/registrations#new
-                       user_registration     POST   /signup(.:format)            devise/registrations#create
-                       new_user_password     GET    /password(.:format)          devise/passwords#new
-                           user_password     POST   /password(.:format)          devise/passwords#create
-                      edit_user_password     GET    /password/edit(.:format)     devise/passwords#edit
-                                password     PATCH  /password(.:format)          devise/passwords#update
-                    update_user_password     PUT    /password(.:format)          devise/passwords#update
-                   new_user_confirmation     GET    /confirmation/new(.:format)  devise/confirmations#new
-                            confirmation     GET    /confirmation(.:format)      devise/confirmations#show
-                       user_confirmation     POST   /confirmation(.:format)      devise/confirmations#create
+             Prefix Verb       URI         Pattern                    Controller#Action
+          new_user_session     GET    /login(.:format)             devise/sessions#new
+              user_session     POST   /login(.:format)             devise/sessions#create
+      destroy_user_session     DELETE /logout(.:format)            devise/sessions#destroy
+     new_user_registration     GET    /signup(.:format)            devise/registrations#new
+         user_registration     POST   /signup(.:format)            devise/registrations#create
+         new_user_password     GET    /password(.:format)          devise/passwords#new
+             user_password     POST   /password(.:format)          devise/passwords#create
+        edit_user_password     GET    /password/edit(.:format)     devise/passwords#edit
+                  password     PATCH  /password(.:format)          devise/passwords#update
+      update_user_password     PUT    /password(.:format)          devise/passwords#update
 ```
 
 # 参考
