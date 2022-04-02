@@ -49,6 +49,10 @@ httpの場合
 httpsの場合  
 `https://1fd2ec17.ngrok.io`
 
+#### 6. セキュリティの設定
+
+Chromeの関係でアクセスできなければ、設定を変える。
+
 # 参考
 
 [ngrokインストール方法と簡単な使い方](https://www.mgo-tec.com/blog-entry-ngrok-install.html)
