@@ -21,4 +21,4 @@ import '../stylesheets/application';
 
 # 参考
 
-[【図解あ り】Rails6でFont Awesomeを用いてSNSアイコンを表示させる - qiita](https://qiita.com/mitaninjin/items/25f5d65fe99f9fc529da)
+[【図解あり】Rails6でFont Awesomeを用いてSNSアイコンを表示させる - qiita](https://qiita.com/mitaninjin/items/25f5d65fe99f9fc529da)
