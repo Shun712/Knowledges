@@ -32,3 +32,7 @@
   border-color: #ffe0cb;
 }
 ```
+
+# 参考
+
+[【Rails基礎】deviseを用いたフラッシュメッセージを表示する方法を簡単に解説](https://techtechmedia.com/flash-messages-rails/)
