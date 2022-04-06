@@ -7,7 +7,11 @@
 ```ruby
 Rails.application.routes.draw do
   # Deviseのマッピングはするが、skipして何も設定しない
-  devise_for :users, skip: %i[sessions registrations passwords]
+  devise_for :users, skip: %i[sessions registrations passwords],
+             controllers: {
+               omniauth_callbacks: 'users/omniauth_callbacks',
+               confirmations: 'users/confirmations'
+             }
   devise_scope :user do
     get 'login', to: 'devise/sessions#new', as: :new_user_session
     post 'login', to: 'devise/sessions#create', as: :user_session
@@ -23,17 +27,24 @@ end
 
 ルーティング結果
 ```ruby
-             Prefix Verb       URI         Pattern                    Controller#Action
-          new_user_session     GET    /login(.:format)             devise/sessions#new
-              user_session     POST   /login(.:format)             devise/sessions#create
-      destroy_user_session     DELETE /logout(.:format)            devise/sessions#destroy
-     new_user_registration     GET    /signup(.:format)            devise/registrations#new
-         user_registration     POST   /signup(.:format)            devise/registrations#create
-         new_user_password     GET    /password(.:format)          devise/passwords#new
-             user_password     POST   /password(.:format)          devise/passwords#create
-        edit_user_password     GET    /password/edit(.:format)     devise/passwords#edit
-                  password     PATCH  /password(.:format)          devise/passwords#update
-      update_user_password     PUT    /password(.:format)          devise/passwords#update
+             Prefix                Verb                   URI         Pattern                    Controller#Action
+   user_line_omniauth_authorize   GET|POST      /users/auth/line(.:format)                   users/omniauth_callbacks#passthru
+    user_line_omniauth_callback   GET|POST      /users/auth/line/callback(.:format)          users/omniauth_callbacks#line
+user_twitter_omniauth_authorize   GET|POST      /users/auth/twitter(.:format)                users/omniauth_callbacks#passthru
+ user_twitter_omniauth_callback   GET|POST      /users/auth/twitter/callback(.:format)       users/omniauth_callbacks#twitter
+          new_user_confirmation     GET         /users/confirmation/new(.:format)            users/confirmations#new
+              user_confirmation     GET         /users/confirmation(.:format)                users/confirmations#show
+                                    POST        /users/confirmation(.:format)                users/confirmations#create
+               new_user_session     GET         /login(.:format)                             devise/sessions#new
+                   user_session     POST        /login(.:format)                             devise/sessions#create
+           destroy_user_session     DELETE      /logout(.:format)                            devise/sessions#destroy
+          new_user_registration     GET         /signup(.:format)                            devise/registrations#new
+              user_registration     POST        /signup(.:format)                            devise/registrations#create
+              new_user_password     GET         /password(.:format)                          devise/passwords#new
+                  user_password     POST        /password(.:format)                          devise/passwords#create
+             edit_user_password     GET         /password/edit(.:format)                     devise/passwords#edit
+                       password     PATCH       /password(.:format)                          devise/passwords#update
+           update_user_password     PUT         /password(.:format)                          devise/passwords#update
 ```
 
 # 参考
