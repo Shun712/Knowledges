@@ -54,3 +54,7 @@ user_twitter_omniauth_authorize   GET|POST      /users/auth/twitter(.:format)   
 [Rails: deviseのURLをカスタムしたい - qiita](https://qiita.com/suin/items/b479000c49d2468a6260)
 
 [DeviseのURLを変更する](https://note.com/kezzytak/n/n2c8c53f71346)
+
+[【Rails】gem ‘devise’で自動作成されるルーティングを取捨選択する方法](https://techtechmedia.com/routes-devise/)
+
+[[Rails] devise sign_in/sign_outのデフォルトルーティングをカスタマイズしてlogin/logoutにする](https://tech.mof-mof.co.jp/blog/devise-custom-routes/)
