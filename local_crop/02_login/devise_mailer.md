@@ -12,20 +12,21 @@ githubに間違って公開しないように、`dotenv-rails`や`config`を用�
 
 ```ruby
 # config/environments/development.rb
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
-    port: 587,
-    user_name: ENV['GMAIL_ADDRESS'],
-    password: ENV['GMAIL_PASSWORD'],
-    authentication: :plain,
-    enable_starttls_auto: true
-  }
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address: 'smtp.gmail.com',
+  port: 587,
+  user_name: ENV['GMAIL_ADDRESS'],
+  password: ENV['GMAIL_PASSWORD'],
+  authentication: :plain,
+  enable_starttls_auto: true
+}
 ```
 
 ### 2. メール認証機能を追加
+
 [この記事](https://qiita.com/kskumgk63/items/aa581b6b3f8c66fa82e2#%E3%83%A1%E3%83%BC%E3%83%AB%E8%AA%8D%E8%A8%BC%E6%A9%9F%E8%83%BD%E3%82%92%E8%BF%BD%E5%8A%A0-1)
 を参照する。
 
@@ -39,6 +40,30 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable #←ココに追加だけ
   #以下略#
+end
+```
+
+# 逆にメールを送りたくない場合
+
+deviseには、`skip_confirmation! `メソッドが用意されており、メール認証をスキップすることができる。  
+ポイントは**Userデータが登録される前**に、このメソッドを使うことである。
+```ruby
+
+def self.create(auth)
+  user = User.new(
+    username: auth['info']['name'],
+    email: auth['info']['email'] || Faker::Internet.email,
+    password: Devise.friendly_token[0, 20]
+  )
+  
+  # 以下の１行を追記
+  user.skip_confirmation!
+  
+  user.save!
+  user.social_profiles.create!(
+    provider: auth['provider'],
+    uid: auth['uid'])
+  user
 end
 ```
 
