@@ -74,3 +74,5 @@ end
 [deviseを使ったログイン機能を実装する！メール認証機能付き - qiita](https://qiita.com/kskumgk63/items/aa581b6b3f8c66fa82e2)
 
 [【Rails】deviseでURL認証付きのメールを送信してみる - qiita](https://qiita.com/ozackiee/items/21fcad4a1564136b9510)
+
+[deviseのTwitterログイン時はメール認証とメール送信をスキップする - qiita](https://qiita.com/tegnike/items/a655c5ee7f71fb5bef08)
