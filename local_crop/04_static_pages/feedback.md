@@ -102,3 +102,5 @@ end
 [コールバック - Railsガイド](https://railsguides.jp/active_record_callbacks.html#%E5%88%A9%E7%94%A8%E5%8F%AF%E8%83%BD%E3%81%AA%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF)
 
 [Ruby on Rails でレビュー機能を実装する - qiita](https://qiita.com/Jumpei_Sogawa/items/0a1bda821a88d45bcf12)
+
+[わたしがRailsチュートリアルで学んだこと【6章】- qiita](https://qiita.com/ShinKano/items/daeed93201701b35d7b0)
