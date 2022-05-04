@@ -16,3 +16,7 @@ FactoryBot.define do
   end
 end
 ```
+
+# 参考
+
+[Active Storage 導入環境下での単体テスト - qiita](https://qiita.com/maca12vel/items/ee4d16827f24f69080ae)
