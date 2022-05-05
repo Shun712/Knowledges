@@ -37,9 +37,16 @@ end
 
 # オプション
 
-`articles = create_list(:article, 3)　#変数articlesに3つのtaskインスタンスの配列が入っている`
+```ruby
+# 変数articlesに3つのtaskインスタンスの配列が入っている
+articles = create_list(:article, 3)
+```
 
-`articles = create_list(:article, 3, :doing, title: 'new_title') # :doingはtrait、titleは上書き`
+
+```ruby
+# :doingはtrait、titleは上書き
+articles = create_list(:article, 3, :doing, title: 'new_title')
+```
 
 # 参考
 
