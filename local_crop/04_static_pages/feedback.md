@@ -103,4 +103,6 @@ end
 
 [Ruby on Rails でレビュー機能を実装する - qiita](https://qiita.com/Jumpei_Sogawa/items/0a1bda821a88d45bcf12)
 
+[【Ruby on Rails】お問合せフォームの作成 - qiita](https://qiita.com/japwork/items/145645e281b81d9bf92c)
+
 [わたしがRailsチュートリアルで学んだこと【6章】- qiita](https://qiita.com/ShinKano/items/daeed93201701b35d7b0)
