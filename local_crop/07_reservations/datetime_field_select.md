@@ -9,7 +9,7 @@
 [![Image from Gyazo](https://i.gyazo.com/888bff34ff21c58701ecccb8589417c3.png)](https://gyazo.com/888bff34ff21c58701ecccb8589417c3)
 
 ```ruby
-.form - group
+.form-group
 = f.label :created_at, class: 'control-label'
 = f.date_select :created_at, class: 'form-control'
 ```
