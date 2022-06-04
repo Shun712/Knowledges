@@ -122,3 +122,5 @@ def configure_permitted_parameters
 [railsでGoogle Mapの表示の仕方](https://note.com/mosanei/n/n460548e2a62b)
 
 [Google Mapを利用する 【Rails6】【Geocoder】【heroku】 - qiita](https://qiita.com/MandoNarin/items/aa91ffae373a8cfc85d2?utm_campaign=popular_items&utm_medium=feed&utm_source=popular_items)
+
+[Rails5 で geocoder を使って、緯度経度の取得する（Google API の設定） - qiita](https://qiita.com/creativival/items/1024719726694f620ad0)
