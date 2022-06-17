@@ -68,6 +68,7 @@ RailsAdmin.config do |config|
     show_in_app
   end
 end
+```
 
 # 管理者権限の付与
 
