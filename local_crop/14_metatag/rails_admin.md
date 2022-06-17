@@ -22,7 +22,7 @@
 
 これによって生成されたモデルを編集し、管理者権限を持つユーザに管理画面へのアクセスと全てのモデルに対しての全ての操作（新規保存、編集、削除など）」を許可する設定をする。
 
-```
+```ruby
 # app/models/ability.rb
 
 class Ability
@@ -39,7 +39,7 @@ end
 
 # config/initializers/rails_admin.rbも以下のように変更
 
-```
+```ruby
 # config/initializers/rails_admin.rb
 
 RailsAdmin.config do |config|
@@ -76,7 +76,7 @@ end
 
 `$ rails g migration add_column_to_users`
 
-```
+```ruby
 class AddColumnToUsers < ActiveRecord::Migration[6.1]
   def change
     add_column :users, :admin, :boolean, default: false
@@ -84,7 +84,7 @@ class AddColumnToUsers < ActiveRecord::Migration[6.1]
 end
 ```
 
-```
+```ruby
 $ rails c
 $ User.all
 $ user = User.find(3) ※ 任意のユーザに付与
@@ -95,7 +95,7 @@ $ user.update_attribute :admin, true
 
 1. `config/locales/rails_admin.ja.yml`を作成
 
-2. [この翻訳](https://gist.github.com/mshibuya/1662352)をコピーし、`rails_admin.ja.yml`に貼り付け
+2. [この翻訳](https://gist.github.com/mshibuya/1662352) をコピーし、`rails_admin.ja.yml`に貼り付け
 
 # 参考
 
