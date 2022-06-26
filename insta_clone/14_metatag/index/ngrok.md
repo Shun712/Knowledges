@@ -54,6 +54,14 @@ httpsの場合
 Chromeのセキュリティ関係でアクセスできなければ、セキュリティの強度を一時的に下げる。
 `chrome://settings/security`
 
+```ruby
+# config/environments/development.rb
+
+Rails.application.configure do 
+  config.hosts.clear
+end
+```
+
 # 参考
 
 [ngrokインストール方法と簡単な使い方](https://www.mgo-tec.com/blog-entry-ngrok-install.html)
