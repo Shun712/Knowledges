@@ -5,6 +5,8 @@
 # スキーマ情報をファイルの末尾に書き出してほしい場合
 
 ```ruby
+# lib/tasks/auto_annotate_models.rake
+
 - 'position_in_class' => 'before'
 + 'position_in_class' => 'after'
 ```
