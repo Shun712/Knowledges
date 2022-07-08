@@ -79,6 +79,7 @@ $ heroku config:add DB_HOSTNAME='<ホスト名>'
 $ heroku config:add DB_PORT='3306'
 
 # gemで「mysql2」を使用しているので、mysql://ではなく「mysql2://」とする。
+
 $ heroku config:add DATABASE_URL='mysql2://<ユーザー名>:<パスワード>@<ホスト名>/<データベース名>?reconnect=true'
 ```
 設定した値を確認する。
