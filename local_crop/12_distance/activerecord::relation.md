@@ -11,8 +11,7 @@ Rubyなどで使える`map、reject、select`などのメソッドはとても�
 => Array
 ```
 
-# map、reject、selectを使,
-ActiveRecord::Relationで取得する
+# map、reject、selectを使いActiveRecord::Relationで取得する
 
 ```ruby
 @susers = User.where(id: users.map{ |user| user.id })
