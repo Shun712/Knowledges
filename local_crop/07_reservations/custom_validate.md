@@ -25,3 +25,5 @@ end
 [RailsでCustom Validatorの実装例 - qiita](https://qiita.com/nobuo_hirai/items/8b0661808a022f85c10c)
 
 [【Rails】開始時間(datetime型)と終了時間にバリデーションをつける - qiita](https://qiita.com/nindendon/items/fe77535a0af36261cefd)
+
+[【Rails入門】バリデーション（validations）の使い方まとめ](https://www.sejuku.net/blog/25973)
