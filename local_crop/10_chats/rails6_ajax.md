@@ -13,3 +13,5 @@ Rails 6.1から仕様が変わり、`local: true` がデフォルトになった
 [3.1 remote要素 - Railsガイド](https://railsguides.jp/working_with_javascript_in_rails.html#remote%E8%A6%81%E7%B4%A0)
 
 [【Rails 6】（初心者向け）Ajax版最小構成CRUDアプリ（ページ移動をゼロに！）- qiita](https://qiita.com/take18k_tech/items/7d4917e30d4c879701ef#1%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%AE%E4%BD%9C%E6%88%90)
+
+[【Rails】 remote: trueでフォーム送信をAjax実装する方法とは？ - pikawaka](https://pikawaka.com/rails/remote-true)
