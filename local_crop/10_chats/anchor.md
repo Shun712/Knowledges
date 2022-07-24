@@ -26,6 +26,23 @@ footer.bg-accent.pt-2.sort id="bottom"
     | © LocalCrops. All rights reserved.
 ```
 
+# link_toにanchorを指定する
+
+```ruby
+
+.table-responsive.my-chats
+  table.table
+    tr
+      td width="25%"
+        = image_tag current_user.partner(chatroom).avatar, class: 'rounded-circle me-1', size: '30x30'
+        br
+          = link_to current_user.partner(chatroom).username.truncate(6), user_path(current_user.partner(chatroom))
+      td valign="middle"
+        = link_to chatroom.decorate.chat_text, chatroom_path(chatroom, anchor: 'bottom')
+      td width="120px" valign="middle"
+        = chatroom.decorate.created_at
+```
+
 # 参考
 
 [Rails link_toでアンカーを設定する - qiita](https://qiita.com/tatsuya1156/items/595fe0df912c6c89f991)
