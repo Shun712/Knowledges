@@ -6,8 +6,6 @@ sendgirdはメールのインフラサービスである。
 
 # 参考
 
-[sendgrid - 公式サイト](https://app.sendgrid.com
-
 [sendgridを使ってメールを送信 Rails - qiita](https://qiita.com/ibarakishiminn/items/e8bf4246242921c2cdd4)
 
 [Ruby on Rails ~ deviseでアプリにユーザー認証、サインアップ、ログイン機能をつける(開発環境&本番環境)（コードメモ）- qiita](https://qiita.com/wtb114/items/176c19bd9caff0893d7c)
