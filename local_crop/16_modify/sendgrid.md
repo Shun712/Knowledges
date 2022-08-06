@@ -17,5 +17,3 @@ sendgirdはメールのインフラサービスである。
 [Rails6 アプリからメールを送信する デプロイ環境編](https://qiita.com/miriwo/items/46a58bd92f74f0dc74d8)
 
 [Rails Action MailerでSendGrid Web APIを使用する - qiita](https://qiita.com/yoshixj/items/34692d760b889299f9b9)
-
-[Heroku+SendGrid+Rails6（devise）の本番環境でメール送信する方法](https://asalworld.com/rails-heroku-sendgrid/)
