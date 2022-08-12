@@ -4,6 +4,8 @@ sendgirdはメールのインフラサービスである。
 
 # 実装手順
 
+### 1. SendGridの有効化とAPI鍵作成
+
 # 参考
 
 [sendgridを使ってメールを送信 Rails - qiita](https://qiita.com/ibarakishiminn/items/e8bf4246242921c2cdd4)
