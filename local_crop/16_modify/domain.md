@@ -1,5 +1,7 @@
 # ドメイン取得方法
 
+### 1. お名前ドットコム側の設定
+
 # 参考
 
 [Herokuで独自ドメインを使う方法【ついでにSSLにも対応】](https://freesworder.net/heroku-own-domain/)
