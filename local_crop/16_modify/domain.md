@@ -2,6 +2,10 @@
 
 ### 1. お名前ドットコム側の設定
 
+### 2. Herokuにドメインの登録
+
+### 3. SSLの設定
+
 # 参考
 
 [Herokuで独自ドメインを使う方法【ついでにSSLにも対応】](https://freesworder.net/heroku-own-domain/)
