@@ -14,15 +14,38 @@
 
 [![Image from Gyazo](https://i.gyazo.com/953657b27e864b39ce6ba524ebc0a31e.png)](https://gyazo.com/953657b27e864b39ce6ba524ebc0a31e)
 
-6. TypeをCNAMEにし、VALUEに先ほどコピーしたDNS Targeを入力する。
+6. TypeをCNAMEにし、VALUEにコピーした`DNS Targe`を入力する。
+参照： 3-4
 
 [![Image from Gyazo](https://i.gyazo.com/d586010f2ef52397a6725b9460f150a5.png)](https://gyazo.com/d586010f2ef52397a6725b9460f150a5)
 
 7. 設定を完了してから、20分くらいでドメインが反映される。
 
-### 2. Herokuにドメインの登録
+### 2. SSLの設定
+
+Herokuのプランを`Hobby`以上にするとSSL証明書を自動で取得できる。
+
+1. 『Domains and certificates』の欄にあるConfigure SSLを選択すると、ドメイン名の入力時同様にモーダルウィンドウが表示される。
+
+2. Automaticallyを選択しContinueを選択する。
+
+[![Image from Gyazo](https://i.gyazo.com/060f7df3b8ebaee7b3482a72859368e5.png)](https://gyazo.com/060f7df3b8ebaee7b3482a72859368e5)
+
+### 3. Herokuにドメインの登録
+
+1. ダッシュボードのメニューバーから`Setting`を選択する。
+
+2. 『Domains and certificates』という項目で、`Add domain`ボタンを押すとモーダルウィンドウが表示されるので、そちらに設定したいドメイン名を入力する。
+
+3. 入力が完了すると赤い部分にドメイン名が表示される。
+
+[![Image from Gyazo](https://i.gyazo.com/18208dba936d80f19e1f1d864b6ac138.png)](https://gyazo.com/18208dba936d80f19e1f1d864b6ac138)
+
+4. `.herokudns.com`と表示されているDNS Targetをコピーしておく。（例：www.example.com.herokudns.com）
 
 ### 3. SSLの設定
+
+HerokuのプランをHobby以上にするとSSL証明書を自動で取得できる。
 
 # 参考
 
