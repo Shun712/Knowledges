@@ -126,3 +126,7 @@ def configure_permitted_parameters
 [Rails5 で geocoder を使って、緯度経度の取得する（Google API の設定） - qiita](https://qiita.com/creativival/items/1024719726694f620ad0)
 
 [RailsのGeocoderとあそぼ - qiita](https://qiita.com/tiara/items/573fe5f1a84ca57dabcd)
+
+[【rails】google maps api　地図情報含んだ投稿をして表示させる方法 - qiita](https://qiita.com/sho-17/items/0854d59d52d9c3679370)
+
+[Ruby on RailsとGoogle Geocoding APIで住所から緯度・経度を取得する方法](https://programming-beginner-zeroichi.jp/articles/271)
