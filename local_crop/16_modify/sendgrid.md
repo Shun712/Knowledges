@@ -84,3 +84,5 @@ config.mailer_sender = 'example@example.com'
 [Rails Action MailerでSendGrid Web APIを使用する - qiita](https://qiita.com/yoshixj/items/34692d760b889299f9b9)
 
 [Heroku+SendGrid+Rails6（devise）の本番環境でメール送信する方法](https://asalworld.com/rails-heroku-sendgrid/)
+
+[SendGridを使ってSMTPでメールを送信する方法](https://blog.kozakana.net/2018/05/rails-sendgrid-smtp/)
