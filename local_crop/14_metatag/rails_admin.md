@@ -108,3 +108,5 @@ $ user.update_attribute :admin, true
 [deviseとcancancanで会員登録と権限管理を行い、管理者だけにrails_adminを公開する - qiita](https://qiita.com/iamdaisuke/items/79d60b3c23e465ae6460)
 
 [[初心者向け] Railsで管理ページを作成し、管理者権限を持つユーザーのみアクセス可能にする[rails_admin] - qiita](https://qiita.com/daisuke114/items/4f6c7eb9a3a96ad1da54)
+
+[Railsで最速で管理画面を作る！ - qiita](https://qiita.com/enomotodev/items/5f6d9348207124a41bf9)
