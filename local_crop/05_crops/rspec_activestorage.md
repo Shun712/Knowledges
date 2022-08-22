@@ -20,3 +20,5 @@ end
 # 参考
 
 [Active Storage 導入環境下での単体テスト - qiita](https://qiita.com/maca12vel/items/ee4d16827f24f69080ae)
+
+[【Rails】seeds.rbでサンプルデータ作成時に画像も一緒に生成する（ActiveStorage使用） - qiita](https://qiita.com/4ma9147/items/567f90194d169a23c729)
