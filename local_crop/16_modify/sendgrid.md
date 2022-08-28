@@ -86,3 +86,5 @@ config.mailer_sender = 'example@example.com'
 [Heroku+SendGrid+Rails6（devise）の本番環境でメール送信する方法](https://asalworld.com/rails-heroku-sendgrid/)
 
 [SendGridを使ってSMTPでメールを送信する方法](https://blog.kozakana.net/2018/05/rails-sendgrid-smtp/)
+
+[Rails Heroku で運用しているサイトで SendGrid を2段階認証にし API KEY を利用して SMTP 方式で Mail を送信する -qiita](https://qiita.com/1024xx4/items/04ee9b9028615a5d0693)
