@@ -27,3 +27,5 @@ end
 [【Rails】 ransackを使って検索機能がついたアプリを作ろう！ - pikawaka](https://pikawaka.com/rails/ransack#%E3%82%BD%E3%83%BC%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E5%AE%9F%E8%A3%85%E3%81%97%E3%82%88%E3%81%86)
 
 [【Ruby on Rails】Ransackで簡単に検索フォームを実装する](https://wild-outdoorlife.com/ruby-on-rails/ransack/?utm_source=rss&utm_medium=rss&utm_campaign=ransack)
+
+[ransackで外部キーをつけているテーブルをソートする - qiita](https://qiita.com/morioka1206/items/146858565c7cf96aaf24)
