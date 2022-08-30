@@ -88,3 +88,5 @@ config.mailer_sender = 'example@example.com'
 [SendGridを使ってSMTPでメールを送信する方法](https://blog.kozakana.net/2018/05/rails-sendgrid-smtp/)
 
 [Rails Heroku で運用しているサイトで SendGrid を2段階認証にし API KEY を利用して SMTP 方式で Mail を送信する -qiita](https://qiita.com/1024xx4/items/04ee9b9028615a5d0693)
+
+[【Rails7】開発環境、本番環境でメール送信できるようにする（SendGrid, Gmail）](https://kobacchi.com/rails-mail-server-sendgrid-gmail/)
