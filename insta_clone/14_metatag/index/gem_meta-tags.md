@@ -93,3 +93,5 @@ html
 [[Rails] metaタグを設定する方法 -qiita](https://qiita.com/momo1010/items/ccb507c013976846a549)
 
 [Railsのrequestで取得できる情報の具体例をまとめた](https://l-light-note.hatenablog.com/entry/2018/04/26/140301)
+
+[[Rails] metaタグを設定する方法 - qiita](https://qiita.com/momo1010/items/ccb507c013976846a549)
