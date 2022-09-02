@@ -64,3 +64,5 @@ simple_formatでは、`html_safe`で処理されている。
 [rails - 公式Github](https://github.com/rails/rails/blob/0e50b7bdf4c0f789db37e22dc45c52b082f674b4/actionview/lib/action_view/helpers/text_helper.rb#L283)
 
 [simple_formatの使い方 - qiita](https://qiita.com/mojihige/items/c01682774e8ef29b361f)
+
+[【Rails】お世話になったフォーマットヘルパー６選 -qiita](https://qiita.com/ozackiee/items/4fbfb2fa6ec73960a403)
