@@ -32,3 +32,5 @@ User.find_or_create_by(first_name: "Taraou")
 [Railsドキュメント](https://railsdoc.com/page/find_or_create_by)
 
 [【Rails】find_or_create_by!を使ってみた - qiita](https://qiita.com/fumi238000/items/a54ffdee3de1e7aa9916)
+
+[find_or_create_by - Railsガイド](https://railsguides.jp/active_record_querying.html#find-or-create-by)
