@@ -34,3 +34,4 @@ Location.within(5, :origin => @somewhere)
 
 [geokit-rails - 公式Github](https://github.com/geokit/geokit-rails)
 
+[【Rails】現在地の取得ってどうやるの？GeokitとGeocoderを使って現在地周辺施設の検索機能を実装してみた！](https://www.wantedly.com/companies/clueit/post_articles/44581)
