@@ -49,3 +49,5 @@
 # 参考
 
 [Rails 日付、時間入力のヘルパーメソッド ６種類 - qiita](https://qiita.com/pyon_kiti_jp/items/747496d02bdb1eff1ce8)
+
+[[Rails]date_selectにBootstrapのform-controlが適用されない - qiita](https://qiita.com/hiromiya0628/items/8ed66213325f63fd84af)
