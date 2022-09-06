@@ -22,3 +22,21 @@ $ rails new uber-eats-like --api
   * bin/rake: Spring inserted
   * bin/rails: Spring inserted
 ```
+
+# Reactプロジェクトを作成
+
+[![Image from Gyazo](https://i.gyazo.com/8d49410b96ade26cc042c45fb9abae4c.png)](https://gyazo.com/8d49410b96ade26cc042c45fb9abae4c)
+
+Railsのサーバーサイドは`app/...`のディレクトリに、Reactは`frontend/`のディレクトリにコードを書いていく。  
+`localhost:3000` のAPIサーバーに対して、フロントエンドは`localhost:3001`で動かすと、両者が疎通する。
+
+```
+# frontendという名前でReactアプリケーションを構築する。
+# frontendディレクトリで下記コマンドを実行する。
+
+$ npx create-react-app frontend
+```
+
+コマンドを実行すると以下のディレクトリやファイルが生成される。
+
+[![Image from Gyazo](https://i.gyazo.com/b53b29628addcc3ac06891d595e30236.png)](https://gyazo.com/b53b29628addcc3ac06891d595e30236)
