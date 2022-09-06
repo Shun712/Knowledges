@@ -31,3 +31,5 @@ end
 [FactoryBot　ActiveStorageを使った画像を紐付ける方法 - qiita](https://qiita.com/minisera/items/c78759634a256a0b98c3)
 
 [【Rails】マイグレーションの書き方《Seed篇》](https://www.autovice.jp/articles/121)
+
+[【Rails】seeds.rbでサンプルデータ作成時に画像も一緒に生成する（ActiveStorage使用） - qiita](https://qiita.com/4ma9147/items/567f90194d169a23c729)
