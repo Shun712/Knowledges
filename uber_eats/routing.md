@@ -57,6 +57,22 @@ export const ChildComponent = ({ id }) => {
 }
 ```
 
+# APIを呼ぶ流れ
+
+[![Image from Gyazo](https://i.gyazo.com/63013d721aecc642aa71b59907efea7a.png)](https://gyazo.com/63013d721aecc642aa71b59907efea7a)
+
+`frontend/src/App.js`  
+↓  
+`frontend/src/containers/Restaurants.jsx`(コンポーネントA)  
+↓  
+`frontend/src/apis/restaurants.js`(関数X)  
+↓  
+`frontend/src/urls/index.js`(URL X)  
+↓  
+URLが指し示す先目掛けて関数XがAPIを叩きに行く。
+
 # 参考
 
 [【最新バージョン対応】React Routerの使い方を解説](https://ralacode.com/blog/post/how-to-use-react-router/)
+
+[入門者でもわかるReact Routerを利用したルーティング設定の基礎](https://reffect.co.jp/react/react-router)
