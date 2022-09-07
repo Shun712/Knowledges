@@ -65,3 +65,13 @@ sample.then(function(value) {
 
 console.log("先に出力");
 ```
+
+`promise.thenを`実行すると、処理した結果の"Promise成功！"という文字列が`result`に引き渡されます。そのため`console.log`で`result`を表示すると、"Promise成功！"という文字がコンソール上に表示されます。
+
+[![Image from Gyazo](https://i.gyazo.com/28639fd2aeca22bee2329dd40b86aab5.png)](https://gyazo.com/28639fd2aeca22bee2329dd40b86aab5)
+
+# 参考
+
+[はじめてのPromise - qiita](https://qiita.com/doidoidon/items/fdc32896319f487993f3)
+
+[【JavaScript】初心者にもわかるPromiseの使い方](https://techplay.jp/column/581)
