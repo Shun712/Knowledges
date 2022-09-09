@@ -48,3 +48,4 @@ function reducer(state, action) {
 ```
 
 `reducer()`は第一引数に`state`、第二引数に`action`を受け取る。
+
