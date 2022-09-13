@@ -44,3 +44,23 @@
 - `setVal`が呼び出される度に、`Example`の関数が呼び出される。
 
 [![Image from Gyazo](https://i.gyazo.com/75a70532280f28b7bc512f4067f1ea92.png)](https://gyazo.com/75a70532280f28b7bc512f4067f1ea92)
+
+# state使用時の注意点
+
+- stateは、コンポーネントの`トップレベル`内でしか使えない。if、while文内でも不可。
+
+[![Image from Gyazo](https://i.gyazo.com/de93d25695dc0d49fda165e2b415c8cf.png)](https://gyazo.com/de93d25695dc0d49fda165e2b415c8cf)
+
+- `count`の値はすぐ値が更新されるのではなく、まずreact内部へ値の更新を予約する。
+
+1. 初期値が描画される
+
+2. カウントをクリックする
+
+3. `setCount`更新関数が呼び出され、カウントアップした値をReact内部に保持される。
+
+4. 再レンダリングした際に、`count`した値を取ってきて描画する。
+
+[![Image from Gyazo](https://i.gyazo.com/ea7f7888ad42162908bef6a23f576e28.png)](https://gyazo.com/ea7f7888ad42162908bef6a23f576e28)
+
+[![Image from Gyazo](https://i.gyazo.com/a876bc511b4f3652f533ff398441e807.png)](https://gyazo.com/a876bc511b4f3652f533ff398441e807)
