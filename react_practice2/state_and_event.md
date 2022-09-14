@@ -64,3 +64,18 @@
 [![Image from Gyazo](https://i.gyazo.com/ea7f7888ad42162908bef6a23f576e28.png)](https://gyazo.com/ea7f7888ad42162908bef6a23f576e28)
 
 [![Image from Gyazo](https://i.gyazo.com/a876bc511b4f3652f533ff398441e807.png)](https://gyazo.com/a876bc511b4f3652f533ff398441e807)
+
+# オブジェクトのステートは新しいオブジェクトを設定する
+
+- `setPerson`(更新用関数)に渡すべきオブジェクトは`person`(現在の値)と**異なるオブジェクト**である必要がある。ゆえにプロパティを設定しただけだと、**オブジェクトは変わらない**。
+
+**ダメな例**
+[![Image from Gyazo](https://i.gyazo.com/c6a09ef7539e79a0a3dac482286f42be.png)](https://gyazo.com/c6a09ef7539e79a0a3dac482286f42be)
+
+- オブジェクトの値を変更するには、新しいオブジェクトを生成して、そのプロパティに新しい値を設定する。
+`name: e.target.value`
+
+- スプレッド演算子を用いて、**新しいオブジェクトとして**生成される。さらに、スプレッド演算子で展開されたプロパティを上書きするには、更新したいプロパティを追加する。
+
+[![Image from Gyazo](https://i.gyazo.com/016dc256fc5796b975a1f9e763e8309e.png)](https://gyazo.com/016dc256fc5796b975a1f9e763e8309e)
+
