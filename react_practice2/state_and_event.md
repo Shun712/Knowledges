@@ -111,4 +111,6 @@
 
 - `prevState`は現在の値に何らかの処理をする。
 
+- コールバック関数の引数には、現在のstateが入る。
+
 [![Image from Gyazo](https://i.gyazo.com/5d0b2bc9b12e243c93521167d43caf96.png)](https://gyazo.com/5d0b2bc9b12e243c93521167d43caf96)
