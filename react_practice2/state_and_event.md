@@ -79,3 +79,36 @@
 
 [![Image from Gyazo](https://i.gyazo.com/016dc256fc5796b975a1f9e763e8309e.png)](https://gyazo.com/016dc256fc5796b975a1f9e763e8309e)
 
+- 正しい記述は、コールバック関数で書いてあげる。戻り値(`{...order, item: e.target.value}`)がオブジェクトのアロー関数となる。
+
+[![Image from Gyazo](https://i.gyazo.com/6c81da97c817cc1d49eee38f4451599f.png)](https://gyazo.com/6c81da97c817cc1d49eee38f4451599f)
+
+# 配列のステートを扱う際の注意
+
+- `newNums = nums`と`newNums = [...nums]`は真偽値が異なる。前者は値を参照しているだけだが、後者は配列の値を一つ一つ展開している。
+
+- `pops`はE配列の最後の要素を削除する。`unshift`は配列の先頭に引数の値を挿入する。
+
+[![Image from Gyazo](https://i.gyazo.com/d3cf61130df6ae6f228c15f02e339810.png)](https://gyazo.com/d3cf61130df6ae6f228c15f02e339810)
+
+# ステートとコンポーネントの関係
+
+- ツリー構造が同じ枝だと`state`の値は保持されるが、枝分かれした場合は値がリセットされる。
+
+- 同じ枝だが、分けて値を管理したい場合は、`key`プロパティを用いる。
+
+[![Image from Gyazo](https://i.gyazo.com/e1dc2bc70999a6646f41225f69e5971b.png)](https://gyazo.com/e1dc2bc70999a6646f41225f69e5971b)
+
+[![Image from Gyazo](https://i.gyazo.com/4773d067c81c8f0a32b4f3503927ecfe.png)](https://gyazo.com/4773d067c81c8f0a32b4f3503927ecfe)
+
+[![Image from Gyazo](https://i.gyazo.com/c90ba2d65039e3a0af100f6ce3de008c.png)](https://gyazo.com/c90ba2d65039e3a0af100f6ce3de008c)
+
+[![Image from Gyazo](https://i.gyazo.com/1e42f838e9e30538f8ae5b7082792cf0.png)](https://gyazo.com/1e42f838e9e30538f8ae5b7082792cf0)
+
+# ステートを複数のコンポーネントで管理
+
+- `state`を`props`で渡すのはコンポーネントが消滅するときや、特定のstateを複数の子コンポーネントで共有したいときである。
+
+- `prevState`は現在の値に何らかの処理をする。
+
+[![Image from Gyazo](https://i.gyazo.com/5d0b2bc9b12e243c93521167d43caf96.png)](https://gyazo.com/5d0b2bc9b12e243c93521167d43caf96)
