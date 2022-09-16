@@ -22,3 +22,16 @@
 
 [![Image from Gyazo](https://i.gyazo.com/3828656899ab18e6d167d688bf8c5599.png)](https://gyazo.com/3828656899ab18e6d167d688bf8c5599)
 
+- `fileter()`メソッドは配列の要素から条件に一致する要素を返す。Rubyでいうと`select`メソッドに似ている。
+
+- `indexOf`メソッドは条件に一致した値を返す。
+
+[![Image from Gyazo](https://i.gyazo.com/8eba46043ab5f721563f2b4d7fc1d97b.png)](https://gyazo.com/8eba46043ab5f721563f2b4d7fc1d97b)
+
+# &&とNull合体演算子
+
+- `??`で`null or undefined`で処理できる。
+
+- `&&`で前者で`true`なら後者も付属される。
+
+[![Image from Gyazo](https://i.gyazo.com/dea5438777b7698c282e7c847058eb46.png)](https://gyazo.com/dea5438777b7698c282e7c847058eb46)
