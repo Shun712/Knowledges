@@ -14,4 +14,6 @@
 
 - 再生ボタンを押すと、Reactのコード自体がどのような順序で実行されているかわかる。
 
+- escキーでコンソールが開く
+
 [![Image from Gyazo](https://i.gyazo.com/40e8a72d15db278b3d97838e232d866b.png)](https://gyazo.com/40e8a72d15db278b3d97838e232d866b)
