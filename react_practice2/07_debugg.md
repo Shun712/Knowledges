@@ -17,3 +17,11 @@
 - escキーでコンソールが開く
 
 [![Image from Gyazo](https://i.gyazo.com/40e8a72d15db278b3d97838e232d866b.png)](https://gyazo.com/40e8a72d15db278b3d97838e232d866b)
+
+# React Developer Toolsを使う
+
+- 開発用のbuildコードでなきゃデバッグできない。
+
+- `component`タグをクリックするとReactのツリー構造が確認でき、引数(propsなど)の中身を見られる。
+
+- `profiler`タグでは、録画ボタンを押してブラウザ操作すると、再レンダリングされた回数など確認できる。
