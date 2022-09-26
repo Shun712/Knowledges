@@ -25,3 +25,5 @@ imges, contours, hierarchy=cv2.findContours(image,mode,method)
 [[学習メモ]OpenCVを用いた平滑化,二値化, 輪郭の抽出 - qiita](https://qiita.com/ankomotch/items/74884b0ca24b739159c0)
 
 [OpenCVで輪郭抽出をするコツ【サンプルコード】](https://shikaku-mafia.com/opencv-find-contours/)
+
+[OpenCV – findContours で画像から輪郭を抽出する方法](https://pystyle.info/opencv-find-contours/#outline__4_1_1)
