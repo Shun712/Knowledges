@@ -21,3 +21,5 @@ ret, th=cv2.threshold(img,thresh,maxval,type)
 [【初心者向け】PythonとOpenCVで画像処理を体験してみよう](https://tech-blog.rakus.co.jp/entry/20201225/open-cv)
 
 [[学習メモ]OpenCVを用いた平滑化,二値化, 輪郭の抽出 - qiita](https://qiita.com/ankomotch/items/74884b0ca24b739159c0)
+
+[【Python】OpenCVで画像の閾値処理（2値化）をする](https://www.learning-nao.com/?p=1866)
