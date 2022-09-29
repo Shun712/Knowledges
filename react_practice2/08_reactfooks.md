@@ -9,3 +9,10 @@
 4. `useReducer`の第2引数には初期値が入る。
 
 [![Image from Gyazo](https://i.gyazo.com/2fdc321407d0080d3c7b98efd7969d25.png)](https://gyazo.com/2fdc321407d0080d3c7b98efd7969d25)
+
+# useStateとuseReducerの違い
+
+複雑度合いで決める。
+`useState`->`useReducer`->`Redux`  
+`useState`: 状態の更新の仕方は利用側に託す。
+`useReducer`: stateと一緒に更新用の処理を保持
