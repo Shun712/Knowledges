@@ -87,7 +87,7 @@
 
 - `newNums = nums`と`newNums = [...nums]`は真偽値が異なる。前者は値を参照しているだけだが、後者は配列の値を一つ一つ展開している。
 
-- `pops`はE配列の最後の要素を削除する。`unshift`は配列の先頭に引数の値を挿入する。
+- `pop`は配列の最後の要素を削除する。`unshift`は配列の先頭に引数の値を挿入する。
 
 [![Image from Gyazo](https://i.gyazo.com/d3cf61130df6ae6f228c15f02e339810.png)](https://gyazo.com/d3cf61130df6ae6f228c15f02e339810)
 
