@@ -15,4 +15,6 @@
 複雑度合いで決める。
 `useState`->`useReducer`->`Redux`  
 `useState`: 状態の更新の仕方は利用側に託す。
-`useReducer`: stateと一緒に更新用の処理を保持
+`useReducer`: stateと一緒に更新用の処理を保持。
+
+[![Image from Gyazo](https://i.gyazo.com/c798f79debc30f3cc0e33feff9c8b2a4.png)](https://gyazo.com/c798f79debc30f3cc0e33feff9c8b2a4)
