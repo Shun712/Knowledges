@@ -18,3 +18,7 @@
 `useReducer`: stateと一緒に更新用の処理を保持。
 
 [![Image from Gyazo](https://i.gyazo.com/c798f79debc30f3cc0e33feff9c8b2a4.png)](https://gyazo.com/c798f79debc30f3cc0e33feff9c8b2a4)
+
+- 純粋性（純粋関数）
+- 特定の引数に特定の戻り値
+- 不変性
