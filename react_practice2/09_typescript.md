@@ -74,3 +74,40 @@ function sum1(x: number, y: number = 1) {
 # ジェネリクスの型定義
 
 - 型を引数のようにして取り扱う。型は関数実行時に決定する。
+
+[![Image from Gyazo](https://i.gyazo.com/5eb3a3a976ceac37a0e0dbd89b3f68fb.png)](https://gyazo.com/5eb3a3a976ceac37a0e0dbd89b3f68fb)
+
+- しかし、関数実行時の方のジェネリクスの型定義は省略された形が多い。
+
+[![Image from Gyazo](https://i.gyazo.com/457a74a8f1213abe22dd8a7979e40705.png)](https://gyazo.com/457a74a8f1213abe22dd8a7979e40705)
+
+# 関数コンポーネントで型を導入
+
+- namespace(名前空間)とは、コードを整理するための手法
+
+- typescriptでReactを用いる際は**関数コンポーネント**を定義する。
+
+[![Image from Gyazo](https://i.gyazo.com/14096f6f7d20cbae6ffb3c857f54271d.png)](https://gyazo.com/14096f6f7d20cbae6ffb3c857f54271d)
+
+# propsの型定義
+
+- ジェネリクスがない場合、`P`は空になり、ある場合は`P`にそのジェネリクスが代入される。
+
+[![Image from Gyazo](https://i.gyazo.com/3c13220d385db835e81411e98285e271.png)](https://gyazo.com/3c13220d385db835e81411e98285e271)
+
+- コンポーネントタグに挟まれたものの型を定義すると`ReactNode`
+
+- 型は関数型も定義できる。
+
+[![Image from Gyazo](https://i.gyazo.com/7ece90e7c42a4dbfd0fffa4a02839e1b.png)](https://gyazo.com/7ece90e7c42a4dbfd0fffa4a02839e1b)
+
+# classの型定義方法
+
+- `public`はどこからでもアクセス可
+
+- `private`はクラス外からアクセス不可
+
+- `protected`はクラスと子コンポーネント外はアクセス不可
+
+[![Image from Gyazo](https://i.gyazo.com/e17ea9bf5bc8ff3181d79f5e54cf23d2.png)](https://gyazo.com/e17ea9bf5bc8ff3181d79f5e54cf23d2)
+
