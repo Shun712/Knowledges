@@ -125,6 +125,142 @@ docker start ：作成したコンテナを起動
 
 [![Image from Gyazo](https://i.gyazo.com/303f143900db74f158f17b8052a2eb50.png)](https://gyazo.com/303f143900db74f158f17b8052a2eb50)
 
+### 4. Dockerにおけるデータ管理
+
+起動したコンテナ内で扱う動的データは、
+
+- コンテナが削除された時点で、そのコンテナ内のデータは消える
+
+- コンテナ間でデータ共有はできない。
+
+というデメリットが有る。
+
+そのため、Dockerではホストマシン上にデータを管理し、それをコンテナにマウントする手法が取られる。
+
+[![Image from Gyazo](https://i.gyazo.com/94a3ba859d99fbd47afb3a03f8de73b9.png)](https://gyazo.com/94a3ba859d99fbd47afb3a03f8de73b9)
+
+### 5. Dockerネットワーク
+
+例えば、Webアプリケーションサーバーの運用を行う場合、APIサーバコンテナとMySQLコンテナを立ち上げるとすると、APIサーバコンテナはMySQLコンテナと通信をする必要がある。
+
+[![Image from Gyazo](https://i.gyazo.com/fd6b4bd7022b974225711ccfddca8f69.png)](https://gyazo.com/fd6b4bd7022b974225711ccfddca8f69)
+
+### 6. Docker Compose
+
+- `Docker Compose`は複数コンテナのDockerアプリケーションを事前定義して実行するためのツールである。
+
+- Webサービスの実行環境をDockerで構築する場合、Webサーバー、DBサーバー、Cacheサーバーなど定義を一つの`docker-compose.yml`ファイルに記述しておくことで、必要なコンテナをまとめて起動・設定できる。
+
+1. Dockerfileを用意する または Docker Hubなどに使用するイメージを用意する
+
+2. docker-compose.ymlを定義する
+
+3. ymlファイルがあるディレクトリで、`$ docker-compose up`を実行する
+
+[![Image from Gyazo](https://i.gyazo.com/1455131cbac0a336ce80e57f122c5cac.png)](https://gyazo.com/1455131cbac0a336ce80e57f122c5cac)
+
+#### docker-compose管理コマンド一覧
+
+docker-composeで起動したコンテナの一覧を表示
+
+`$ docker-compose ps`
+
+docker-compose.ymlに記述した設定からコンテナ起動(再起動も)
+
+`$ docker-compose up`
+
+docker-composeで作成されたコンテナやネットワークを削除
+
+`$ docker-compose down`
+
+指定したサービスコンテナ内でコマンド実行
+
+`$ docker-compose run [コンテナ名] [コマンド]`
+
+一連のコンテナ停止
+
+`$ docker-compose stop`
+
+一連のコンテナ起動
+
+`$ docker-compose start`
+
+docker-composeによるアプリ実行環境構築例
+
+#### docker-composeによるアプリ実行環境構築例
+
+1. imageの用意
+
+```Dockerfile
+# ベースとなるイメージの指定（rubyのバージョン3.0.3を指定）
+FROM ruby:3.0.3
+ 
+# ビルド(build)時に実行するコマンドの指定
+# インストール可能なパッケージの一覧の更新
+RUN apt-get update -qq \
+# パッケージのインストール（nodejs、postgresql-client、npmを指定）
+&& apt-get install -y nodejs postgresql-client npm \
+&& rm -rf /var/lib/apt/lists/* \
+&& npm install --global yarn
+ 
+# 作業ディレクトリの指定
+WORKDIR /myapp
+COPY Gemfile /myapp/Gemfile
+COPY Gemfile.lock /myapp/Gemfile.lock
+RUN bundle install
+# Add a script to be executed every time the container starts.
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 3000
+# Configure the main process to run when running the image
+CMD ["rails", "server", "-b", "0.0.0.0"]
+```
+
+2. docker-compose.ymlの作成
+
+```yaml
+version: "3" # docker-composeのversion指定
+services: # 起動するサービスコンテナを書いていく
+  db: # dbサーバーコンテナを起動
+    # コンテナ名の指定
+    container_name: rails_todo_db
+    # イメージの指定
+    image: postgres:14.2-alpine
+    # データの永続化（ホスト側のtmp/dbディレクトリにマウントする）
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    # 環境変数の指定（初期設定値）
+    environment:
+      POSTGRES_PASSWORD: password
+  web: # webサーバーコンテナを起動
+    # コンテナ名の指定
+    container_name: rails_todo_web
+    # Dockerfile のあるディレクトリのパスを指定（imageかbuildを必ず指定する必要がある）
+    build: .
+    # デフォルトのコマンド指定（Rails特有の問題解消とRails立ち上げを指定している）
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    # データの永続化（ホスト側のカレントディレクトリにバインドマウントする）
+    volumes:
+      - .:/myapp
+    # ポートの指定（外部からのアクセス時のポート：Dockerコンテナからアクセス時のポート）
+    ports:
+      - "3000:3000"
+    # 依存関係の指定（dbが起動した後に、webが起動するようになる）
+    depends_on:
+      - db
+```
+
+3. docker-composeの実行
+
+`$ docker-compose up -d`
+
+デタッチドモード(-d : バックグラウンド)で一連のコンテナを起動する。
+
+[![Image from Gyazo](https://i.gyazo.com/b70af93ca51ff77650c4b542fae704e6.png)](https://gyazo.com/b70af93ca51ff77650c4b542fae704e6)
+
 # 参考
 
 [【図解】Dockerの全体像を理解する -前編- - qiita](https://qiita.com/etaroid/items/b1024c7d200a75b992fc)
+
+[【図解】Dockerの全体像を理解する -中編- - qiita](https://qiita.com/etaroid/items/88ec3a0e2d80d7cdf87a)
