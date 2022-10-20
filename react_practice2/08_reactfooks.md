@@ -22,3 +22,25 @@
 - 純粋性（純粋関数）
 - 特定の引数に特定の戻り値
 - 不変性
+
+# useContext
+
+- 孫までpropsを引き渡す際に、propsのバケツリレーを回避する。
+
+[![Image from Gyazo](https://i.gyazo.com/8a11726f2f57214a469f6f24b1e84986.png)](https://gyazo.com/8a11726f2f57214a469f6f24b1e84986)
+
+- stateをコンポーネント間で共有したい場合は、`<Context.Provider />`で囲む。
+
+1. 元となるコンポーネントで`createContext`を定義する。
+
+2. `export const MyContext = createContext();`と変数を設定し、使用したいコンポーネントで取得する。（変数は自由に変えて良い。）
+
+3. `useState`を用いて分割代入をそれぞれのコンポーネントで状態を管理している。
+
+[![Image from Gyazo](https://i.gyazo.com/9bb7d5ecbc7e04131fe0a06f70409dcf.png)](https://gyazo.com/9bb7d5ecbc7e04131fe0a06f70409dcf)
+
+[![Image from Gyazo](https://i.gyazo.com/e912895c65affab80385b883ca121c54.png)](https://gyazo.com/e912895c65affab80385b883ca121c54)
+
+- useContextを使いたい場合、`<ThemeContext.Provider>`で挟みたいものは、`children`を持ってくる。
+
+[![Image from Gyazo](https://i.gyazo.com/3474edd93502095ddf702ed750307344.png)](https://gyazo.com/3474edd93502095ddf702ed750307344)
