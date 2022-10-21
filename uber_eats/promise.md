@@ -18,7 +18,7 @@
 
 ### 非同期処理のコールバック例
 
-javascriptは非同期処理のコールバック関数地獄はねストが深くなるので、**それを防ぐのがPromise**である。
+javascriptは非同期処理のコールバック関数地獄はネストが深くなるので、**それを防ぐのがPromise**である。
 
 ```javascript
 sampleFunction1(function(data1) {
@@ -75,3 +75,5 @@ console.log("先に出力");
 [はじめてのPromise - qiita](https://qiita.com/doidoidon/items/fdc32896319f487993f3)
 
 [【JavaScript】初心者にもわかるPromiseの使い方](https://techplay.jp/column/581)
+
+[Promise、async/awaitに立ち向かう - qiita](https://qiita.com/papi_tokei/items/265d11dd385d053526e2)
