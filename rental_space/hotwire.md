@@ -24,6 +24,8 @@
   - yarn
     - node.jsで使うパッケージやES6のモジュールをインストール
 
+[![Image from Gyazo](https://i.gyazo.com/3d4c74129f7b0caec871a3a840afa864.jpg)](https://gyazo.com/3d4c74129f7b0caec871a3a840afa864)
+
 Rails6では、ES6のjsを使うため上記のようなパッケージを使う必要があった。
 
 - 外部環境の変化
