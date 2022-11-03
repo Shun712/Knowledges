@@ -101,3 +101,5 @@ end
 [【Rails】後からカラムを追加して外部キーを張る際に、add_referenceを使う場合の注意点。 - qiita](https://qiita.com/kurawo___D/items/e3694f7a870a1cc4738e)
 
 [外部キーにnullが入ることを許容する[Rails] - qiita](https://qiita.com/takuyanin/items/6f6be86d1265be21bf9e)
+
+[Railsで外部キー制約のついたカラムを作る時のmigrationの書き方 - qiita](https://qiita.com/publichtml/items/1fba15d8071fab66d043)
