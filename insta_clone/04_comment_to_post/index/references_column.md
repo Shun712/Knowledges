@@ -99,3 +99,5 @@ end
 [【Rails】references型について - qiita](https://qiita.com/mmaumtjgj/items/cdc76572d392957c4299)
 
 [【Rails】後からカラムを追加して外部キーを張る際に、add_referenceを使う場合の注意点。 - qiita](https://qiita.com/kurawo___D/items/e3694f7a870a1cc4738e)
+
+[外部キーにnullが入ることを許容する[Rails] - qiita](https://qiita.com/takuyanin/items/6f6be86d1265be21bf9e)
