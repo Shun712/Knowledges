@@ -78,6 +78,16 @@ end
 何のカラム名が どの型で どのテーブルに 追加されたという名前になるので
 わかりやすい。
 
+## 外部キーにnullが入ることを許容する
+
+外部キーとして設けたカラムに`null`を許容されるオプションは、`optional: true`をつける。
+
+```ruby
+class Question < ApplicationRecord
+  belongs_to :user, optional: true
+end
+```
+
 # 参考
 
 [Railsの外部キー制約とreference型について - qiita](https://qiita.com/ryouzi/items/2682e7e8a86fd2b1ae47)
