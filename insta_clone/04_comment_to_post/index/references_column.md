@@ -87,3 +87,5 @@ end
 [Rails の マイグレーションと references について](https://menta.work/post/detail/2656/PVcqTLbkKeje8bgdkncG)
 
 [【Rails】references型について - qiita](https://qiita.com/mmaumtjgj/items/cdc76572d392957c4299)
+
+[【Rails】後からカラムを追加して外部キーを張る際に、add_referenceを使う場合の注意点。 - qiita](https://qiita.com/kurawo___D/items/e3694f7a870a1cc4738e)
