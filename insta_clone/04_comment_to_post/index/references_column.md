@@ -85,3 +85,5 @@ end
 [外部キーをreferences型カラムで保存する - qiita](https://qiita.com/sinagaki58/items/7edea51ef00e393834ca)
 
 [Rails の マイグレーションと references について](https://menta.work/post/detail/2656/PVcqTLbkKeje8bgdkncG)
+
+[【Rails】references型について - qiita](https://qiita.com/mmaumtjgj/items/cdc76572d392957c4299)
