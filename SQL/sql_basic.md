@@ -1,3 +1,13 @@
+[西條学園](https://qiita.com/Vitalize/private/dba4e7112bfc8eb2290c#3-chapter-1-select)
+
+[Chapter 1 SELECT](https://paiza.io/projects/SZG01dpL3Au0y6JfTc2fTg?language=mysql)
+
+[Chapter 2 SELECT sub query, synchronized sub query, JOIN](https://paiza.io/projects/mGFMzEN421sZUej-DhvUyQ?language=mysql)
+
+[Chapter 3 INSERT, UPDATE, DELETE](https://paiza.io/projects/CD0fXZiB6OqyT4FzN3iA_A?language=mysql)
+
+[Chapter 4　実践問題](https://paiza.io/projects/vsNwOWGKXGoQiK3sImR0HQ?language=mysql)
+
 # LIKE
 
 あいまい検索「〇〇〇を含む文字列」を検索する。
