@@ -48,3 +48,5 @@ end
 
 [Railsでモデル層からバリデーションを切り出して共通のバリデーションルールを定義する ActiveModel::EachValidator編
 ](https://tech.mof-mof.co.jp/blog/rails-each-validator/)
+
+[【Rails】バリデーションの共通化(ActiveModel::EachValidator/ActiveModel::Validater)](https://zenn.dev/ddpmntcpbr/articles/26ed8bded2bc5f)
